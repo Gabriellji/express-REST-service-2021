@@ -1,6 +1,10 @@
-const getAll = async () => {
-  // TODO: mock implementation. should be replaced during task development
-  return [];
-};
+const DB = require('../../common/memory.db');
 
-module.exports = { getAll };
+const getAll = async () => DB.users;
+
+const getUserById = async (id) => {
+  const userById = DB.users.find(el => el.id === id);
+  return userById;
+}
+
+module.exports = { getAll, getUserById };
