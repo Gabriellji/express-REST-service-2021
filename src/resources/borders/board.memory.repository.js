@@ -1,4 +1,5 @@
-const DB = require('../../common/memory.db');
+const { DB } = require('../../common/memory.db');
+const tasksService = require('../tasks/task.service');
 
 const getAll = async () => DB.boards;
 
@@ -21,8 +22,9 @@ const updateBoard = async (id, updatedBoard) => {
 }
 
 const deleteBoard = async id => {
-  const board = await DB.boards.findIndex(el => el.id === id);
+  const board = DB.boards.findIndex(el => el.id === id);
   DB.boards.splice(board, 1);
-}
+  await tasksService.deleteTasksByBoardId(id);
+};
 
 module.exports = { getAll, getBoardById, createBoard, updateBoard, deleteBoard }

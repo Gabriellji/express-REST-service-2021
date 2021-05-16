@@ -1,4 +1,4 @@
-const DB = require('../../common/memory.db');
+const { DB } = require('../../common/memory.db');
 
 const getAll = async () => DB.users;
 
@@ -22,8 +22,12 @@ const updateUser = async (id, updatedUser) => {
 }
 
 const deleteUser = async id => {
-  const user = await DB.users.findIndex(el => el.id === id);
-  DB.users.splice(user, 1);
-}
+  const use = DB.users.findIndex(el => el.id === id);
+  DB.users.splice(use, 1);
+  while (DB.tasks.findIndex(el => el.userId === id) !== -1) {
+    const ind = DB.tasks.findIndex(el => el.userId === id);
+    DB.tasks[ind].userId = null;
+  }
+};
 
 module.exports = { getAll, getUserById, createUser, updateUser, deleteUser };
