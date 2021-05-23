@@ -1,7 +1,7 @@
 const { DB } = require('../../common/memory.db');
 /**
  * Returns array of board entities
- * @returns {array} array of objects
+ * @returns {objects[]} array of objects
  */
 const getAll = async () => {
   const {boards} = DB;
@@ -10,7 +10,7 @@ const getAll = async () => {
 
 /**
  * Returns an object of board entity with matched id
- * @param {string} id uuid of board
+ * @param {string} id string
  * @returns {object} object of borard entity
  */
 const getBoardById = async id => {
@@ -31,7 +31,7 @@ const createBoard = async (board) => {
 
 /**
  * Returns an object with updated board entity
- * @param {string} id uuid of board 
+ * @param {string} id string 
  * @param {object} updatedBoard object with request body params 
  * @returns object with updated board entity
  */
@@ -43,9 +43,9 @@ const updateBoard = async (id, updatedBoard) => {
 };
 
 /**
- * Assign to boards array filtered boards array by id  
- * @param {string} boardId uuid of board 
- * @return {void} nothing
+ * Assign to boards array filtered boards array by board id  
+ * @param {string} boardId string 
+ * @returns {void} Nothing
  */
 const deleteBoard = async (boardId) => {
   DB.boards = await DB.boards.filter(board => board.id !== boardId);
