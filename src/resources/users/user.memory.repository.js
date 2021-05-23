@@ -1,15 +1,15 @@
 const { DB } = require('../../common/memory.db');
 
 /**
- * Returns an array of user entities
- * @returns {objects[]} array of objects
+ * Returns all users
+ * @returns {objects[]} array of objects ( user entities )
  */
 const getAll = async () => DB.users;
 
 /**
- * Returns an object of user entity with matched id
+ * Retrieves a user by id
  * @param {string} id user id
- * @returns {object} object of user entity
+ * @returns {object} object of user entity that matched id
  */
 const getUserById = async id => {
   const user = DB.users.find(el => el.id === id);
@@ -17,9 +17,9 @@ const getUserById = async id => {
 }
 
 /**
- * Returns created user entity ( object )
+ * Creates new user
  * @param {object} user object with request body params
- * @returns {object} 
+ * @returns {object} user entity
  */
 const createUser = async user => {
   DB.users.push(user);
@@ -28,7 +28,7 @@ const createUser = async user => {
 };
 
 /**
- * Returns updated user entity ( object )
+ * Updates user by id with recived data
  * @param {string} id user id 
  * @param {object} updatedUser object with request body params
  * @returns {object} updated user entity
@@ -42,7 +42,7 @@ const updateUser = async (id, updatedUser) => {
 }
 
 /**
- * Finds the index of user to delete and assign all tasks to null of deleted user
+ * Deletes user by id and assign all tasks of deleted user to null 
  * @param {string} id user id
  * @returns {void} Nothing
  */

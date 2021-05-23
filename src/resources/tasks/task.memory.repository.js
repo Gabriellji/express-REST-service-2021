@@ -1,15 +1,15 @@
 const { DB } = require('../../common/memory.db');
 
 /**
- * Returns array of tasks entities
- * @returns {objects[]} array of objects
+ * Returns all tasks
+ * @returns {objects[]} array of objects ( task entities )
  */
 const getAll = async () => DB.tasks;
 
 /**
- * Returns an object of task entity with matched id
+ * Retrieves a task by id
  * @param {string} id task id
- * @returns {object} object of task entity
+ * @returns {object} object of task entity that matched id
  */
 const getTaskById = async (id) => {
   const task = await DB.tasks.find((el) => el.id === id);
@@ -17,7 +17,7 @@ const getTaskById = async (id) => {
 };
 
 /**
- * Push new task entity ( object ) to array of tasks
+ * Creates new tasks
  * @param {object} task object with request body params
  * @returns {void} Nothing
  */
@@ -26,7 +26,7 @@ const createTask = async (task) => {
 };
 
 /**
- * Returns an object with updated task entity
+ * Updates a task by id with recived data
  * @param {string} id task id 
  * @param {object} updatedTask object with request body params 
  * @returns object with updated task entity
@@ -40,7 +40,7 @@ const updateTask = async (id, updatedTask) => {
 };
 
 /**
- * Assign tasks array to filtered tasks array by task id  
+ * Delete task  
  * @param {string} taskId task id 
  * @returns {void} Nothing
  */
@@ -49,7 +49,7 @@ const deleteTask = async (taskId) => {
 };
 
 /**
- * Assign tasks array to filtered tasks array by board id  
+ * Delete all tasks if board deleted  
  * @param {string} id board id 
  * @returns {void} Nothing
  */
