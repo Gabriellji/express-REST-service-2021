@@ -6,7 +6,7 @@ const { v4: uuid4 } = require('uuid');
 class Board {
   /**
    * 
-   * @param {object} param0 object with properties that represent board entity
+   * @param {Object} param0 Object with properties that represent board entity
    */
   constructor({
     id = uuid4(),

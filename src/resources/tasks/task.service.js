@@ -2,14 +2,14 @@ const tasksRepo = require('./task.memory.repository');
 
 /**
  * Returns the result of getAll function
- * @returns {objects[]} array of objects ( task entities )
+ * @returns {Objects[]} array of Objects ( task entities )
  */
 const getAll = () => tasksRepo.getAll();
 
 /**
  * Returns the result of getTaskById function
- * @param {string} id task id
- * @returns {object} object of task entity that matched the id
+ * @param {String} id task id
+ * @returns {Object} Object of task entity that matched the id
  */
 const getTask = async (id) => {
   const task = await tasksRepo.getTaskById(id);
@@ -18,8 +18,8 @@ const getTask = async (id) => {
 
 /**
  * Call a function from task repository module
- * @param {object} task object with request body params
- * @returns {void} Nothing
+ * @param {Object} task Object with request body params
+ * @returns {Void} Nothing
  */
 const createTask = async (task) => {
   await tasksRepo.createTask(task);
@@ -27,9 +27,9 @@ const createTask = async (task) => {
 
 /**
  * Call a function from task repository module
- * @param {string} id task id
- * @param {object} data object with updated props
- * @returns {void} Nothing
+ * @param {String} id task id
+ * @param {Object} data Object with updated props
+ * @returns {Void} Nothing
  */
 const updateTask = async (id, data) => {
   await tasksRepo.updateTask(id, data);
@@ -37,8 +37,8 @@ const updateTask = async (id, data) => {
 
 /**
  * Call a function from task repository module
- * @param {string} id task id
- * @returns {void} Nothing 
+ * @param {String} id task id
+ * @returns {Void} Nothing 
  */
 const deleteTask = async (id) => {
   await tasksRepo.deleteTask(id);
@@ -46,8 +46,8 @@ const deleteTask = async (id) => {
 
 /**
  * Call a function from task repository module
- * @param {string} id board id
- * @returns {void} Nothing 
+ * @param {String} id board id
+ * @returns {Void} Nothing 
  */
 const deleteTasksByBoardId = async (id) => {
   await tasksRepo.deleteTasksByBoardId(id);

@@ -1,14 +1,14 @@
 const boardRepo = require('./board.memory.repository');
 /**
  * Returns the result of getAll function
- * @returns {objects[]} array of objects (board entities)
+ * @returns {Objects[]} array of Objects (board entities)
  */
 const getAll = () => boardRepo.getAll();
 
 /**
  * Returns the result of getBoardById function
- * @param {string} id string
- * @returns {object} object of borard entity
+ * @param {String} id String
+ * @returns {Object} Object of borard entity
  */
 const getBoardById = async (id) => {
   const board = await boardRepo.getBoardById(id);
@@ -17,8 +17,8 @@ const getBoardById = async (id) => {
 
 /**
  * Call a function from board repository module
- * @param {object} board object with request body params
- * @returns {void} Nothing
+ * @param {Object} board Object with request body params
+ * @returns {Void} Nothing
  */
 const createBoard = async (board) => {
   await boardRepo.createBoard(board);
@@ -26,9 +26,9 @@ const createBoard = async (board) => {
 
 /**
  * Call a function from board repository module
- * @param {string} id string
- * @param {object} data object with updated props
- * @returns {void} Nothing
+ * @param {String} id String
+ * @param {Object} data Object with updated props
+ * @returns {Void} Nothing
  */
 const updateBoard = async (id, data) => {
   await boardRepo.updateBoard(id, data);
@@ -36,8 +36,8 @@ const updateBoard = async (id, data) => {
 
 /**
  * Call a function from board repository module
- * @param {string} id string
- * @returns {void} Nothing 
+ * @param {String} id String
+ * @returns {Void} Nothing 
  */
 const deleteBoard = async (id) => {
   await boardRepo.deleteBoard(id);
