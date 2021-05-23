@@ -2,46 +2,70 @@ const router = require('express').Router();
 const Task = require('./task.model');
 const tasksService = require('./task.service');
 
-router.route('/:boardId/tasks').get(async (req, res) => {
-  const tasks = await tasksService.getAll();
-  // map task fields to exclude secret fields like "password"
-  res.json(tasks.map(Task.toResponse));
-});
-
-router.route('/:boardId/tasks/:id').get(async (req, res) => {
-    const { id } = req.params;
-    const task = await tasksService.getTask(id);
-    if (!task) {
-      return res.status(404);
-    }
-   return res.status(200).json(task);
-});
-
-router.route('/:boardId/tasks').post(async (req, res) => {
-  const {boardId} = req.params;
-  const task = await tasksService.createTask(
-    new Task({
-      ...req.body,
-      boardId
-    })
-  );
-  return res.status(201).json(task);
-});
-
-router.route('/:boardId/tasks/:id').put(async (req, res) => {
-  const { id } = req.params;
-  const updatedTask = req.body;
-  const task = await tasksService.updateTask(id, updatedTask);
-  if (!task) {
-    return res.status(404);
+router.get('/:boardId/tasks', async (req, res) => {
+  try {
+    const tasks = await tasksService.getAll();
+    res.status(200).json(tasks);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
   }
-  return res.status(200).json(Task.toResponse(task));
 });
 
-router.route('/:boardId/tasks/:id').delete(async (req, res) => {
-  const { id } = req.params;
-  await tasksService.deleteTask(id);
-  res.status(204).json();
+router.get('/:boardId/tasks/:taskId', async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const task = await tasksService.getTask(taskId);
+    if (!task) {
+      return res.status(404).send('Not Found');
+    }
+    return res.status(200).json(task);
+  } catch (err) {
+    console.error(err.message);
+    return res.status(500).send('Server error');
+  }
+});
+
+router.post('/:boardId/tasks', async (req, res) => {
+  try {
+    const { boardId } = req.params;
+    const task = new Task({
+      ...req.body,
+      boardId,
+    });
+    await tasksService.createTask(task);
+    res.status(201).json(task);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+router.put('/:boardId/tasks/:taskId', async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const updatedTask = req.body;
+    const task = await tasksService.updateTask(taskId, updatedTask);
+    res.status(200).json(task);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+});
+
+router.delete('/:boardId/tasks/:taskId', async (req, res) => {
+  try {
+    const { taskId } = req.params;
+    const task = await tasksService.getTask(taskId);
+    if (!task) {
+      return res.status(404).send('Not Found');
+    }
+    await tasksService.deleteTask(taskId);
+    return res.status(200).json(task);
+  } catch (err) {
+    console.error(err.message);
+    return res.status(500).send('Server error');
+  }
 });
 
 module.exports = router;
