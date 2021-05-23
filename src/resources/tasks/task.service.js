@@ -1,15 +1,15 @@
 const tasksRepo = require('./task.memory.repository');
 
 /**
- * Returns function from task repository module
- * @returns {function} getAll function
+ * Returns the result of getAll function
+ * @returns {objects[]} array of objects ( task entities )
  */
 const getAll = () => tasksRepo.getAll();
 
 /**
- * Returns an object of task entity with matched id
- * @param {string} id string
- * @returns {object} object of task entity
+ * Returns the result of getTaskById function
+ * @param {string} id task id
+ * @returns {object} object of task entity that matched the id
  */
 const getTask = async (id) => {
   const task = await tasksRepo.getTaskById(id);
@@ -27,7 +27,7 @@ const createTask = async (task) => {
 
 /**
  * Call a function from task repository module
- * @param {string} id string
+ * @param {string} id task id
  * @param {object} data object with updated props
  * @returns {void} Nothing
  */
@@ -37,7 +37,7 @@ const updateTask = async (id, data) => {
 
 /**
  * Call a function from task repository module
- * @param {string} id string
+ * @param {string} id task id
  * @returns {void} Nothing 
  */
 const deleteTask = async (id) => {
@@ -46,7 +46,7 @@ const deleteTask = async (id) => {
 
 /**
  * Call a function from task repository module
- * @param {string} id string
+ * @param {string} id board id
  * @returns {void} Nothing 
  */
 const deleteTasksByBoardId = async (id) => {

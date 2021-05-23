@@ -43,7 +43,7 @@ const updateBoard = async (id, updatedBoard) => {
 };
 
 /**
- * Assign to boards array filtered boards array by board id  
+ * Assign boards array to filtered boards array by board id  
  * @param {string} boardId string 
  * @returns {void} Nothing
  */

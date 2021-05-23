@@ -8,7 +8,7 @@ const getAll = async () => DB.tasks;
 
 /**
  * Returns an object of task entity with matched id
- * @param {string} id string
+ * @param {string} id task id
  * @returns {object} object of task entity
  */
 const getTaskById = async (id) => {
@@ -27,7 +27,7 @@ const createTask = async (task) => {
 
 /**
  * Returns an object with updated task entity
- * @param {string} id string 
+ * @param {string} id task id 
  * @param {object} updatedTask object with request body params 
  * @returns object with updated task entity
  */
@@ -40,8 +40,8 @@ const updateTask = async (id, updatedTask) => {
 };
 
 /**
- * Assign to tasks array filtered tasks array by task id  
- * @param {string} taskId string 
+ * Assign tasks array to filtered tasks array by task id  
+ * @param {string} taskId task id 
  * @returns {void} Nothing
  */
 const deleteTask = async (taskId) => {
@@ -49,8 +49,8 @@ const deleteTask = async (taskId) => {
 };
 
 /**
- * Assign to tasks array filtered tasks array by board id  
- * @param {string} taskId string 
+ * Assign tasks array to filtered tasks array by board id  
+ * @param {string} id board id 
  * @returns {void} Nothing
  */
 const deleteTasksByBoardId = async (id) => {

@@ -1,12 +1,12 @@
 const boardRepo = require('./board.memory.repository');
 /**
- * Returns function from board repository module
- * @returns {function} getAll function
+ * Returns the result of getAll function
+ * @returns {objects[]} array of objects (board entities)
  */
 const getAll = () => boardRepo.getAll();
 
 /**
- * Returns an object of board entity with matched id
+ * Returns the result of getBoardById function
  * @param {string} id string
  * @returns {object} object of borard entity
  */
