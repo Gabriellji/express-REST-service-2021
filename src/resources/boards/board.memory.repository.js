@@ -1,7 +1,7 @@
 const { DB } = require('../../common/memory.db');
 /**
  * Returns all boards
- * @returns {objects[]} array of objects (board entities)
+ * @returns {Objects[]} array of Objects (board entities)
  */
 const getAll = async () => {
   const {boards} = DB;
@@ -10,8 +10,8 @@ const getAll = async () => {
 
 /**
  * Retrieves a board by id
- * @param {string} id string
- * @returns {object} object of borard entity that matched id  
+ * @param {String} id String
+ * @returns {Object} Object of borard entity that matched id  
  */
 const getBoardById = async id => {
   const board = await DB.boards.find(el => el.id === id);
@@ -20,8 +20,8 @@ const getBoardById = async id => {
 
 /**
  * Creates new board
- * @param {object} board object with request body params
- * @returns {object} object with created board entity
+ * @param {Object} board Object with request body params
+ * @returns {Object} Object with created board entity
  */
 const createBoard = async (board) => {
   DB.boards.push(board);
@@ -31,9 +31,9 @@ const createBoard = async (board) => {
 
 /**
  * Updates a board by id with recived data
- * @param {string} id string 
- * @param {object} updatedBoard object with request body params 
- * @returns object with updated board entity
+ * @param {String} id String 
+ * @param {Object} updatedBoard Object with request body params 
+ * @returns Object with updated board entity
  */
 const updateBoard = async (id, updatedBoard) => {
   const board = await getBoardById(id);
@@ -44,8 +44,8 @@ const updateBoard = async (id, updatedBoard) => {
 
 /**
  * Deletes a board by id  
- * @param {string} boardId string 
- * @returns {void} Nothing
+ * @param {String} boardId String 
+ * @returns {Void} Nothing
  */
 const deleteBoard = async (boardId) => {
   DB.boards = await DB.boards.filter(board => board.id !== boardId);

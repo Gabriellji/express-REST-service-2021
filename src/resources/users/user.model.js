@@ -7,7 +7,7 @@ const { v4: uuid4 } = require('uuid');
 class User {
     /**
    * 
-   * @param {object} param0 object with properties that represent user entity
+   * @param {Object} param0 Object with properties that represent user entity
    */
   constructor({
     id = uuid4(),

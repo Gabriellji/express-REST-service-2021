@@ -7,7 +7,7 @@ const { v4: uuid4 } = require('uuid');
 class Task {
   /**
    * 
-   * @param {object} param0 object with properties that represent task entity
+   * @param {Object} param0 Object with properties that represent task entity
    */
   constructor({
     id = uuid4(),
