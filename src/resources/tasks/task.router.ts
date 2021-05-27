@@ -1,10 +1,18 @@
-const router = require('express').Router();
-const Task = require('./task.model');
-const tasksService = require('./task.service');
+import express from 'express';
+import Task from './task.model';
+import {
+  getAll,
+  getTask,
+  createTask,
+  updateTask,
+  deleteTask,
+} from './task.service';
 
-router.get('/:boardId/tasks', async (req, res) => {
+const router = express.Router();
+
+router.get('/:boardId/tasks', async (_, res) => {
   try {
-    const tasks = await tasksService.getAll();
+    const tasks = await getAll();
     res.status(200).json(tasks);
   } catch (err) {
     console.error(err.message);
@@ -15,7 +23,10 @@ router.get('/:boardId/tasks', async (req, res) => {
 router.get('/:boardId/tasks/:taskId', async (req, res) => {
   try {
     const { taskId } = req.params;
-    const task = await tasksService.getTask(taskId);
+    if (!taskId) {
+      throw new Error('ID is required');
+    }
+    const task = await getTask(taskId);
     if (!task) {
       return res.status(404).send('Not Found');
     }
@@ -33,7 +44,7 @@ router.post('/:boardId/tasks', async (req, res) => {
       ...req.body,
       boardId,
     });
-    await tasksService.createTask(task);
+    await createTask(task);
     res.status(201).json(task);
   } catch (err) {
     console.error(err.message);
@@ -44,8 +55,11 @@ router.post('/:boardId/tasks', async (req, res) => {
 router.put('/:boardId/tasks/:taskId', async (req, res) => {
   try {
     const { taskId } = req.params;
+    if (!taskId) {
+      throw new Error('ID is required');
+    }
     const updatedTask = req.body;
-    const task = await tasksService.updateTask(taskId, updatedTask);
+    const task = await updateTask(taskId, updatedTask);
     res.status(200).json(task);
   } catch (err) {
     console.error(err.message);
@@ -56,11 +70,14 @@ router.put('/:boardId/tasks/:taskId', async (req, res) => {
 router.delete('/:boardId/tasks/:taskId', async (req, res) => {
   try {
     const { taskId } = req.params;
-    const task = await tasksService.getTask(taskId);
+    if (!taskId) {
+      throw new Error('ID is required');
+    }
+    const task = await getTask(taskId);
     if (!task) {
       return res.status(404).send('Not Found');
     }
-    await tasksService.deleteTask(taskId);
+    await deleteTask(taskId);
     return res.status(200).json(task);
   } catch (err) {
     console.error(err.message);
@@ -68,4 +85,4 @@ router.delete('/:boardId/tasks/:taskId', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

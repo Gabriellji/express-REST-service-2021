@@ -1,10 +1,18 @@
-const router = require('express').Router();
-const User = require('./user.model');
-const usersService = require('./user.service');
+import express from 'express';
+import User from './user.model';
+import {
+  getAll,
+  getUser,
+  createUser,
+  updateUser,
+  deleteUser,
+} from './user.service';
 
-router.route('/').get(async (req, res) => {
+const router = express.Router();
+
+router.get('/', async (_, res) => {
   try {
-    const users = await usersService.getAll();
+    const users = await getAll();
     res.json(users.map(User.toResponse));
   } catch (err) {
     console.error(err.message);
@@ -12,10 +20,13 @@ router.route('/').get(async (req, res) => {
   }
 });
 
-router.route('/:id').get(async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const user = await usersService.getUser(id);
+    if (!id) {
+      throw new Error('ID param is required');
+    }
+    const user = await getUser(id);
     if (!user) {
       return res.status(404);
     }
@@ -26,13 +37,14 @@ router.route('/:id').get(async (req, res) => {
   }
 });
 
-router.route('/').post(async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { login, name, password } = req.body;
-    const user = await usersService.createUser(
+
+    const user = await createUser(
       new User({
-        login,
         name,
+        login,
         password,
       })
     );
@@ -43,11 +55,14 @@ router.route('/').post(async (req, res) => {
   }
 });
 
-router.route('/:id').put(async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    if (!id) {
+      throw new Error('ID param is required');
+    }
     const updatedUser = req.body;
-    const user = await usersService.updateUser(id, updatedUser);
+    const user = await updateUser(id, updatedUser);
     if (!user) {
       return res.status(404);
     }
@@ -58,10 +73,13 @@ router.route('/:id').put(async (req, res) => {
   }
 });
 
-router.route('/:id').delete(async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    await usersService.deleteUser(id);
+    if (!id) {
+      throw new Error('ID param is required');
+    }
+    await deleteUser(id);
     res.status(204).send('User has been successful deleted');
   } catch (err) {
     console.error(err.message);
@@ -69,4 +87,4 @@ router.route('/:id').delete(async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

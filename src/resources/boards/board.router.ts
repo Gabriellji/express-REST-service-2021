@@ -1,11 +1,19 @@
-const router = require('express').Router();
-const Board = require('./board.model');
-const boardService = require('./board.service');
-const taskService = require('../tasks/task.service');
+import express from 'express';
+import Board from './board.model';
+import {
+  getAll,
+  getBoardById,
+  createBoard,
+  updateBoard,
+  deleteBoard,
+} from './board.service';
+import { deleteTasksByBoardId } from '../tasks/task.service';
 
-router.route('/').get(async (req, res) => {
+const router = express.Router();
+
+router.get('/', async (_, res) => {
   try {
-    const boards = await boardService.getAll();
+    const boards = await getAll();
     return res.status(200).json(boards);
   } catch (err) {
     console.error(err.message);
@@ -15,7 +23,11 @@ router.route('/').get(async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const board = await boardService.getBoardById(req.params.id);
+    const { id } = req.params;
+    if (!id) {
+      throw new Error('ID param is required');
+    }
+    const board = await getBoardById(id);
     if (!board) {
       return res.status(404).send('Not Found');
     }
@@ -29,7 +41,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const board = new Board(req.body);
-    await boardService.createBoard(board);
+    await createBoard(board);
     res.status(201).json(board);
   } catch (err) {
     console.error(err.message);
@@ -40,11 +52,14 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const board = boardService.getBoardById(id);
+    if (!id) {
+      throw new Error('ID param is required');
+    }
+    const board = getBoardById(id);
     if (!board) {
       return res.status(404);
     }
-    await boardService.updateBoard(id, req.body);
+    await updateBoard(id, req.body);
     return res.status(200).json(board);
   } catch (err) {
     console.error(err.message);
@@ -55,12 +70,15 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const board = boardService.getBoardById(id);
+    if (!id) {
+      throw new Error('ID param is required');
+    }
+    const board = getBoardById(id);
     if (!board) {
       return res.status(404);
     }
-    await boardService.deleteBoard(id);
-    await taskService.deleteTasksByBoardId(id);
+    await deleteBoard(id);
+    await deleteTasksByBoardId(id);
     return res.status(200).json(board);
   } catch (err) {
     console.error(err.message);
@@ -68,4 +86,4 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

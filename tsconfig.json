@@ -1,8 +1,14 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "es2020",
+    "module": "commonjs",
     "allowJs": false,
+    "declaration": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "incremental": true,
     "outDir": "./build",
     "rootDir": "./src",
     "downlevelIteration": false,
@@ -24,6 +30,7 @@
     "node_modules/"
   ],
   "include": [
-    "../src/**/*.ts"
+    "./src/**/*.ts",
+    "src/common/config.ts"
   ]
 }
