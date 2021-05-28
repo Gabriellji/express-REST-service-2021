@@ -14,9 +14,6 @@ const get = async (): Promise<ITask[]> => DB.tasks;
  */
 const getById = async (id: string): Promise<ITask | undefined> => {
   const task = DB.tasks.find((el: { id: string }) => el.id === id);
-  // if (!task) {
-  //   throw new Error('Task not found');
-  // }
   return task;
 };
 
