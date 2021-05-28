@@ -1,6 +1,6 @@
 import { DB } from '../../common/memory.db';
 import { IBoard } from 'interfaces/interfaces';
-import { Board } from 'interfaces/types';
+import { Board } from 'types/types';
 /**
  * Returns all boards
  * @returns {IBoard[]} array of Objects (board entities)

@@ -8,7 +8,7 @@ import {
   deleteBoard,
 } from './board.service';
 import { deleteTasksByBoardId } from '../tasks/task.service';
-import { HttpCodes } from '../../interfaces/enums';
+import { HttpCodes } from '../../enums/enums';
 
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED } = HttpCodes;
 

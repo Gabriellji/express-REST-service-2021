@@ -8,7 +8,7 @@ import {
   deleteUser,
 } from './user.service';
 
-import { HttpCodes, StatusMsg, RequiredError } from '../../interfaces/enums';
+import { HttpCodes, StatusMsg, RequiredError } from '../../enums/enums';
 
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED, NO_CONTENT } = HttpCodes;
 const { SERVER_ERROR_MSG, NOT_FOUND_MSG, NO_CONTENT_MSG } = StatusMsg;

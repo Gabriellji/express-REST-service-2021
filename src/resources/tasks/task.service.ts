@@ -1,5 +1,5 @@
 import { ITask } from 'interfaces/interfaces';
-import { Task } from 'interfaces/types';
+import { Task } from 'types/types';
 import {
   get,
   getById,

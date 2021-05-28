@@ -1,5 +1,5 @@
 import { IBoard } from 'interfaces/interfaces';
-import { Board } from 'interfaces/types';
+import { Board } from 'types/types';
 import {
   get,
   getById,

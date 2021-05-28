@@ -7,7 +7,7 @@ import {
   updateTask,
   deleteTask,
 } from './task.service';
-import { HttpCodes, StatusMsg, RequiredError } from '../../interfaces/enums';
+import { HttpCodes, StatusMsg, RequiredError } from '../../enums/enums';
 
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED } = HttpCodes;
 const { SERVER_ERROR_MSG, NOT_FOUND_MSG } = StatusMsg;
