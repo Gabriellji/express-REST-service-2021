@@ -8,16 +8,19 @@ import {
   deleteBoard,
 } from './board.service';
 import { deleteTasksByBoardId } from '../tasks/task.service';
+import { HttpCodes } from '../../interfaces/enums';
+
+const { SERVER_ERROR, NOT_FOUND, OK, CREATED } = HttpCodes;
 
 const router = express.Router();
 
 router.get('/', async (_, res) => {
   try {
     const boards = await getAll();
-    return res.status(200).json(boards);
+    return res.status(OK).json(boards);
   } catch (err) {
     console.error(err.message);
-    return res.status(500).send('Server error');
+    return res.status(SERVER_ERROR).send('Server error');
   }
 });
 
@@ -29,12 +32,12 @@ router.get('/:id', async (req, res) => {
     }
     const board = await getBoardById(id);
     if (!board) {
-      return res.status(404).send('Not Found');
+      return res.status(NOT_FOUND).send('Not Found');
     }
-    return res.status(200).json(board);
+    return res.status(OK).json(board);
   } catch (err) {
     console.error(err.message);
-    return res.status(500).send('Server error');
+    return res.status(SERVER_ERROR).send('Server error');
   }
 });
 
@@ -42,10 +45,10 @@ router.post('/', async (req, res) => {
   try {
     const board = new Board(req.body);
     await createBoard(board);
-    res.status(201).json(board);
+    res.status(CREATED).json(board);
   } catch (err) {
     console.error(err.message);
-    res.status(500).send('Server error');
+    res.status(SERVER_ERROR).send('Server error');
   }
 });
 
@@ -57,13 +60,13 @@ router.put('/:id', async (req, res) => {
     }
     const board = getBoardById(id);
     if (!board) {
-      return res.status(404);
+      return res.status(NOT_FOUND);
     }
     await updateBoard(id, req.body);
-    return res.status(200).json(board);
+    return res.status(OK).json(board);
   } catch (err) {
     console.error(err.message);
-    return res.status(500).send('Server error');
+    return res.status(SERVER_ERROR).send('Server error');
   }
 });
 
@@ -75,14 +78,14 @@ router.delete('/:id', async (req, res) => {
     }
     const board = getBoardById(id);
     if (!board) {
-      return res.status(404);
+      return res.status(NOT_FOUND);
     }
     await deleteBoard(id);
     await deleteTasksByBoardId(id);
-    return res.status(200).json(board);
+    return res.status(OK).json(board);
   } catch (err) {
     console.error(err.message);
-    return res.status(500).send('Server error');
+    return res.status(SERVER_ERROR).send('Server error');
   }
 });
 

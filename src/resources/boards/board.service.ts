@@ -1,4 +1,5 @@
-import { IBoard } from 'interfaces/user';
+import { IBoard } from 'interfaces/interfaces';
+import { Board } from 'interfaces/types';
 import {
   get,
   getById,
@@ -17,7 +18,7 @@ const getAll = (): Promise<IBoard[]> => get();
  * @param {String} id String
  * @returns {IBoard} Object of borard entity
  */
-const getBoardById = async (id: string): Promise<IBoard | undefined> => {
+const getBoardById = async (id: string): Promise<Board> => {
   const board = await getById(id);
   return board;
 };
@@ -27,7 +28,7 @@ const getBoardById = async (id: string): Promise<IBoard | undefined> => {
  * @param {Object} board Object with request body params
  * @returns {Void} Nothing
  */
-const createBoard = async (board: IBoard): Promise<IBoard | undefined> =>
+const createBoard = async (board: IBoard): Promise<Board> =>
   await create(board);
 /**
  * Call a function from board repository module
@@ -35,10 +36,8 @@ const createBoard = async (board: IBoard): Promise<IBoard | undefined> =>
  * @param {Object} data Object with updated props
  * @returns {Void} Nothing
  */
-const updateBoard = async (
-  id: string,
-  data: IBoard
-): Promise<IBoard | undefined> => await update(id, data);
+const updateBoard = async (id: string, data: IBoard): Promise<Board> =>
+  await update(id, data);
 /**
  * Call a function from board repository module
  * @param {String} id String

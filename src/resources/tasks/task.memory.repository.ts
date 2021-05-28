@@ -1,4 +1,5 @@
-import { ITask } from 'interfaces/user';
+import { ITask } from 'interfaces/interfaces';
+import { Task } from 'interfaces/types';
 
 import { DB } from '../../common/memory.db';
 /**
@@ -12,7 +13,7 @@ const get = async (): Promise<ITask[]> => DB.tasks;
  * @param {String} id task id
  * @returns {ITask} Object of task entity that matched id
  */
-const getById = async (id: string): Promise<ITask | undefined> => {
+const getById = async (id: string): Promise<Task> => {
   const task = DB.tasks.find((el: { id: string }) => el.id === id);
   return task;
 };
@@ -22,7 +23,7 @@ const getById = async (id: string): Promise<ITask | undefined> => {
  * @param {Object} task Object with request body params
  * @returns {ITask} Nothing
  */
-const create = async (task: ITask): Promise<ITask | undefined> => {
+const create = async (task: ITask): Promise<Task> => {
   DB.tasks.push(task);
   const newTask = await getById(task.id);
   return newTask;
@@ -34,10 +35,7 @@ const create = async (task: ITask): Promise<ITask | undefined> => {
  * @param {ITask} updatedTask Object with request body params
  * @returns Object with updated task entity
  */
-const update = async (
-  id: string,
-  updatedTask: ITask
-): Promise<ITask | undefined> => {
+const update = async (id: string, updatedTask: ITask): Promise<Task> => {
   const task = await getById(id);
   if (!task) {
     throw new Error('Task not found');

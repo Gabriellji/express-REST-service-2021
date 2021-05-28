@@ -1,7 +1,6 @@
 import { DB } from '../../common/memory.db';
 
-import { IUser } from 'interfaces/user';
-// import { ITask } from 'interfaces/user';
+import { IUser } from 'interfaces/interfaces';
 
 /**
  * Returns all users

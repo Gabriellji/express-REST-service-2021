@@ -1,4 +1,5 @@
-import { ITask } from 'interfaces/user';
+import { ITask } from 'interfaces/interfaces';
+import { Task } from 'interfaces/types';
 import {
   get,
   getById,
@@ -19,7 +20,7 @@ const getAll = (): Promise<ITask[]> => get();
  * @param {String} id task id
  * @returns {ITask} Object of task entity that matched the id
  */
-const getTask = async (id: string): Promise<ITask | undefined> => {
+const getTask = async (id: string): Promise<Task> => {
   const task = await getById(id);
   return task;
 };
@@ -29,8 +30,7 @@ const getTask = async (id: string): Promise<ITask | undefined> => {
  * @param {Object} task Object with request body params
  * @returns {ITask} Nothing
  */
-const createTask = async (task: ITask): Promise<ITask | undefined> =>
-  create(task);
+const createTask = async (task: ITask): Promise<Task> => create(task);
 /**
  * Call a function from task repository module
  * @param {String} id task id

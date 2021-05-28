@@ -1,6 +1,6 @@
 import { v4 as uuid4 } from 'uuid';
 
-import { IUser } from 'interfaces/user';
+import { IUser, IUserToResponse } from 'interfaces/interfaces';
 
 /**
  *
@@ -28,7 +28,7 @@ class User {
     this.password = password;
   }
 
-  static toResponse(user: IUser) {
+  static toResponse(user: IUser): IUserToResponse {
     const { id, name, login } = user;
     return { id, name, login };
   }

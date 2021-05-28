@@ -1,4 +1,4 @@
-import { IDB } from 'interfaces/user';
+import { IDB } from 'interfaces/interfaces';
 
 const DB: IDB = {
   users: [],

@@ -6,7 +6,7 @@ import {
   remove,
 } from './user.memory.repository';
 
-import { IUser } from 'interfaces/user';
+import { IUser } from 'interfaces/interfaces';
 
 /**
  * Returns the result of getAll function

@@ -5,6 +5,12 @@ export interface IUser {
   password: string;
 }
 
+export interface IUserToResponse {
+  id: string;
+  name: string;
+  login: string;
+}
+
 export interface ITask {
   id: string;
   title: string;
