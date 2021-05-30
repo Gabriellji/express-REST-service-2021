@@ -1,9 +1,10 @@
+import { IBoard } from 'src/interfaces/interfaces';
 import { v4 as uuid4 } from 'uuid';
 /**
  *
  * Represents Board entity
  */
-class Board {
+class Board implements IBoard {
   /**
    *
    * @param {Object} param0 Object with properties that represent board entity

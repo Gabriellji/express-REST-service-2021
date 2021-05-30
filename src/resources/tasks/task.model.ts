@@ -1,10 +1,11 @@
+import { ITask } from 'src/interfaces/interfaces';
 import { v4 as uuid4 } from 'uuid';
 
 /**
  *
  * Represents Task entity
  */
-class Task {
+class Task implements ITask {
   /**
    *
    * @param {Object} param0 Object with properties that represent task entity

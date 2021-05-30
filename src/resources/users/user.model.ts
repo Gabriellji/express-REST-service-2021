@@ -1,12 +1,12 @@
+import { IUser } from 'src/interfaces/interfaces';
+import { UserToResponse } from 'src/types/types';
 import { v4 as uuid4 } from 'uuid';
-
-import { IUser, IUserToResponse } from '../../interfaces/interfaces';
 
 /**
  *
  * Represents Task entity
  */
-class User {
+class User implements IUser {
   /**
    *
    * @param {Object} param0 Object with properties that represent user entity
@@ -28,7 +28,7 @@ class User {
     this.password = password;
   }
 
-  static toResponse(user: IUser): IUserToResponse {
+  static toResponse(user: IUser): UserToResponse {
     const { id, name, login } = user;
     return { id, name, login };
   }
