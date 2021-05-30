@@ -1,6 +1,6 @@
 import { v4 as uuid4 } from 'uuid';
 
-import { IUser, IUserToResponse } from 'interfaces/interfaces';
+import { IUser, IUserToResponse } from '../../interfaces/interfaces';
 
 /**
  *
@@ -12,8 +12,11 @@ class User {
    * @param {Object} param0 Object with properties that represent user entity
    */
   public id: string;
+
   public name: string;
+
   public login: string;
+
   public password: string;
 
   constructor({

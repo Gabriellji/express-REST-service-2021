@@ -1,5 +1,5 @@
-import { IBoard } from 'interfaces/interfaces';
-import { Board } from 'types/types';
+import { IBoard } from '../../interfaces/interfaces';
+import { Board } from '../../types/types';
 import {
   get,
   getById,
@@ -28,8 +28,7 @@ const getBoardById = async (id: string): Promise<Board> => {
  * @param {Object} board Object with request body params
  * @returns {Void} Nothing
  */
-const createBoard = async (board: IBoard): Promise<Board> =>
-  await create(board);
+const createBoard = async (board: IBoard): Promise<Board> => create(board);
 /**
  * Call a function from board repository module
  * @param {String} id String
@@ -37,7 +36,7 @@ const createBoard = async (board: IBoard): Promise<Board> =>
  * @returns {Void} Nothing
  */
 const updateBoard = async (id: string, data: IBoard): Promise<Board> =>
-  await update(id, data);
+  update(id, data);
 /**
  * Call a function from board repository module
  * @param {String} id String

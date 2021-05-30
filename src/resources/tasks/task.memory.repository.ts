@@ -1,5 +1,5 @@
-import { ITask } from 'interfaces/interfaces';
-import { Task } from 'types/types';
+import { ITask } from '../../interfaces/interfaces';
+import { Task } from '../../types/types';
 
 import { DB } from '../../common/memory.db';
 /**
