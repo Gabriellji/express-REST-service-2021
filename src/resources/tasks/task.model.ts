@@ -9,13 +9,13 @@ class Task {
    *
    * @param {Object} param0 Object with properties that represent task entity
    */
-  public id: string;
-  public title: string;
-  public order: number;
-  public description: string;
-  public userId: string;
-  public boardId: string;
-  public columnId: string;
+  id: string;
+  title: string;
+  order: number;
+  description: string;
+  userId: string;
+  boardId: string;
+  columnId: string;
   constructor({
     id = uuid4(),
     title = 'Title',

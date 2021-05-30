@@ -11,13 +11,10 @@ class User {
    *
    * @param {Object} param0 Object with properties that represent user entity
    */
-  public id: string;
-
-  public name: string;
-
-  public login: string;
-
-  public password: string;
+  id: string;
+  name: string;
+  login: string;
+  password: string;
 
   constructor({
     id = uuid4(),
