@@ -5,6 +5,8 @@ import YAML from 'yamljs';
 import userRouter from './resources/users/user.router';
 import boardRouter from './resources/boards/board.router';
 import taskRouter from './resources/tasks/task.router';
+import { logger } from './common/logger';
+import { logInfo, errorHandler } from './middlewares/error-handler';
 
 const app = express();
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
@@ -20,6 +22,29 @@ app.use('/', (req, res, next) => {
   }
   next();
 });
+
+process.on('uncaughtException', (error: Error) => {
+  console.error('error', `captured error: ${error.message}`);
+  logger.log('error', `captured error: ${error.message}`);
+  const { exit } = process;
+  exit(1);
+});
+
+// // PUT IT HERE
+// throw Error('Oops!');
+
+process.on('unhandledRejection', (reason: Error) => {
+  console.error('error', `Unhandled rejection detected: ${reason.message}`);
+  logger.log('error', `Unhandled rejection detected: ${reason.message}`);
+  const { exit } = process;
+  exit(1);
+});
+
+// // PUT IT HERE
+// Promise.reject(Error('Oops!'));
+
+app.use(logInfo);
+app.use(errorHandler);
 
 app.use('/users', userRouter);
 app.use('/boards', [boardRouter, taskRouter]);

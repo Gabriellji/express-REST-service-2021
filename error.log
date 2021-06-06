@@ -1,0 +1,4 @@
+{"message":"   {\"status\":500,\"message\":\"Internal Server Error\"}","level":"error"}
+{"message":"   {\"status\":500,\"message\":\"Internal Server Error\"}","level":"error"}
+{"level":"error","message":"   Unhandled rejection detected: User not found"}
+{"level":"error","message":"   captured error: Cannot set headers after they are sent to the client"}

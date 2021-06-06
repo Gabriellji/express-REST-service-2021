@@ -26,20 +26,21 @@ router.get('/', async (_, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
     if (!id) {
       throw new Error(PARAM_PEQUIRED);
     }
     const user = await getUser(id);
+
     if (!user) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
-    return res.status(OK).json(user);
+    res.status(OK).json(user);
   } catch (err) {
     console.error(err.message);
-    return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+    res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
   }
 });
 
@@ -54,6 +55,9 @@ router.post('/', async (req, res) => {
         password,
       })
     );
+    if (!user) {
+      throw new Error('Something went wrong...');
+    }
     return res.status(CREATED).json(User.toResponse(user));
   } catch (err) {
     console.error(err.message);
