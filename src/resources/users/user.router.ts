@@ -26,7 +26,7 @@ router.get('/', async (_, res) => {
   }
 });
 
-router.get('/:id', async (req, res, next) => {
+router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     if (!id) {
@@ -37,10 +37,10 @@ router.get('/:id', async (req, res, next) => {
     if (!user) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
-    res.status(OK).json(user);
+    return res.status(OK).json(User.toResponse(user));
   } catch (err) {
     console.error(err.message);
-    res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+    return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
   }
 });
 

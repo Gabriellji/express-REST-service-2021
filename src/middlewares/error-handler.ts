@@ -5,7 +5,9 @@ import { Request, Response, NextFunction } from 'express';
 import { HttpException } from 'src/common/HttpException';
 
 const logInfo = (req: Request, res: Response, next: NextFunction): void => {
-  const { url, query, params, body, method } = req;
+  const { url, query, params, method } = req;
+  let { body } = req;
+
   const start = Date.now();
 
   next();
@@ -13,6 +15,10 @@ const logInfo = (req: Request, res: Response, next: NextFunction): void => {
   finished(res, () => {
     const ms = Date.now() - start;
     const { statusCode } = res;
+    if (body.password) {
+      body = { ...body, password: '*******' };
+    }
+
     logger.info(
       JSON.stringify({
         method,

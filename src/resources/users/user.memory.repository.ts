@@ -44,9 +44,9 @@ const update = async (id: string, updatedUser: IUser): Promise<IUser> => {
   if (!user) {
     throw new Error('User not found');
   }
-  user.name = updatedUser.name;
-  user.login = updatedUser.login;
-  user.password = updatedUser.password;
+  user.name = updatedUser.name ? updatedUser.name : user.name;
+  user.login = updatedUser.login ? updatedUser.login : user.login;
+  user.password = updatedUser.password ? updatedUser.password : user.password;
   return user;
 };
 
