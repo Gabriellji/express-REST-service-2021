@@ -2,19 +2,25 @@ version: '3'
 services:
     node:
         build: .
+        network_mode: my-net
         ports:
             - ${PORT}:${PORT}
         depends_on:
             - db
         environment: 
-            - PORT=4000
+            PORT: ${PORT}
     db:
         image: postgres
+        network_mode: my-net
         restart: always
         build: ./database
         ports: 
             - ${POSTGRES_PORT}:${POSTGRES_PORT}
         environment: 
-            - POSTGRES_PASSWORD=password
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_PORT: ${POSTGRES_PORT}
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRESS_DB: ${POSTGRESS_DB}
+
         
         
