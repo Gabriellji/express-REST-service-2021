@@ -1,17 +1,17 @@
 FROM node:14.17-alpine
 
-USER node
+RUN mkdir -p /usr/src/app
 
-RUN mkdir /home/node/code
+WORKDIR /usr/src/app
 
-WORKDIR /home/node/code
+COPY package*.json ./
 
-COPY --chown=node:node package-lock.json package.json ./
+RUN npm install
 
-RUN npm ci
+COPY . .
 
-COPY --chown=node:node . .
+EXPOSE 4000
 
-EXPOSE 8080
+RUN npm install -g nodemon
 
 CMD ["npm", "run", "dev"]
