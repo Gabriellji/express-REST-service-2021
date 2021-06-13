@@ -1,3 +1,4 @@
+import { User } from 'src/types/types';
 import { DB } from '../../common/memory.db';
 
 import { IUser } from '../../interfaces/interfaces';
@@ -13,11 +14,11 @@ const getAllUsers = async (): Promise<IUser[]> => DB.users;
  * @param {String} id user id
  * @returns {IUser} Object of user entity that matched id
  */
-const getById = async (id: string): Promise<IUser> => {
+const getById = async (id: string): Promise<User> => {
   const user = DB.users.find((el: { id: string }) => el.id === id);
-  if (!user) {
-    throw new Error('User not found');
-  }
+  // if (!user) {
+  //   throw new Error('User not found');
+  // }
   return user;
 };
 
@@ -26,7 +27,7 @@ const getById = async (id: string): Promise<IUser> => {
  * @param {Object} user Object with request body params
  * @returns {Object} user entity
  */
-const create = async (user: IUser): Promise<IUser> => {
+const create = async (user: IUser): Promise<User> => {
   DB.users.push(user);
   const newUser = await getById(user.id);
   return newUser;
@@ -43,9 +44,9 @@ const update = async (id: string, updatedUser: IUser): Promise<IUser> => {
   if (!user) {
     throw new Error('User not found');
   }
-  user.name = updatedUser.name;
-  user.login = updatedUser.login;
-  user.password = updatedUser.password;
+  user.name = updatedUser.name ? updatedUser.name : user.name;
+  user.login = updatedUser.login ? updatedUser.login : user.login;
+  user.password = updatedUser.password ? updatedUser.password : user.password;
   return user;
 };
 

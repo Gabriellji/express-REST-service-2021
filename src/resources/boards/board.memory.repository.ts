@@ -1,4 +1,4 @@
-import { Board } from '../../types/types';
+import { Board, BoardToUpdate } from '../../types/types';
 import { IBoard } from '../../interfaces/interfaces';
 import { DB } from '../../common/memory.db';
 /**
@@ -34,13 +34,16 @@ const create = async (board: IBoard): Promise<Board> => {
  * @param {IBoard} updatedBoard Object with request body params
  * @returns Object with updated board entity
  */
-const update = async (id: string, updatedBoard: IBoard): Promise<Board> => {
+const update = async (
+  id: string,
+  updatedBoard: BoardToUpdate
+): Promise<Board> => {
   const board = await getById(id);
   if (!board) {
     throw new Error('Board not found');
   }
-  board.title = updatedBoard.title;
-  board.columns = updatedBoard.columns;
+  board.title = updatedBoard.title ? updatedBoard.title : board.title;
+  board.columns = updatedBoard.columns ? updatedBoard.columns : board.columns;
   return board;
 };
 

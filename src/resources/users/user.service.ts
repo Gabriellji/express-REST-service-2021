@@ -7,6 +7,7 @@ import {
 } from './user.memory.repository';
 
 import { IUser } from '../../interfaces/interfaces';
+import { User } from 'src/types/types';
 
 /**
  * Returns the result of getAll function
@@ -19,14 +20,14 @@ const getAll = (): Promise<IUser[]> => getAllUsers();
  * @param {String} id user id
  * @returns {IUser} user entity that matched the id
  */
-const getUser = async (id: string): Promise<IUser> => getById(id);
+const getUser = async (id: string): Promise<User> => getById(id);
 
 /**
  * Returns the result of createUser function
  * @param {IUser} user Object with request body params
  * @returns {IUser} created user entity
  */
-const createUser = async (user: IUser): Promise<IUser> => create(user);
+const createUser = async (user: IUser): Promise<User> => create(user);
 
 /**
  * Returns the result of updateUser function

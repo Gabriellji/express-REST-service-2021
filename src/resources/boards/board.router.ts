@@ -58,11 +58,11 @@ router.put('/:id', async (req, res) => {
     if (!id) {
       throw new Error('ID param is required');
     }
-    const board = getBoardById(id);
+
+    const board = await updateBoard(id, req.body);
     if (!board) {
-      return res.status(NOT_FOUND);
+      return res.status(NOT_FOUND).send('NOT_FOUND_MSG');
     }
-    await updateBoard(id, req.body);
     return res.status(OK).json(board);
   } catch (err) {
     console.error(err.message);

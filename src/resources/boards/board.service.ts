@@ -1,5 +1,5 @@
 import { IBoard } from '../../interfaces/interfaces';
-import { Board } from '../../types/types';
+import { Board, BoardToUpdate } from '../../types/types';
 import {
   get,
   getById,
@@ -35,7 +35,7 @@ const createBoard = async (board: IBoard): Promise<Board> => create(board);
  * @param {Object} data Object with updated props
  * @returns {Void} Nothing
  */
-const updateBoard = async (id: string, data: IBoard): Promise<Board> =>
+const updateBoard = async (id: string, data: BoardToUpdate): Promise<Board> =>
   update(id, data);
 /**
  * Call a function from board repository module
