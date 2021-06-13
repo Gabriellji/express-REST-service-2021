@@ -6,6 +6,7 @@ services:
             - ./src:/usr/src/app/src
             - /usr/src/app/node_modules
         network_mode: my-net
+        restart: on-failure
         ports:
             - ${PORT}:${PORT}
         depends_on:

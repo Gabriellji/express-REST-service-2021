@@ -14,7 +14,7 @@
     "build": "tsc",
     "watch:build": "tsc --watch",
     "dev": "nodemon -L src/server.ts",
-    "watch:server": "nodemon './build/server.js' --L './build'",
+    "watch:server": "nodemon './build/server.js' -L --exitcrash './build'",
     "start": "npm-run-all clean build --parallel watch:build watch:server --print-label",
     "lint": "eslint --ext .js,.ts --fix src/",
     "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace --runInBand",
