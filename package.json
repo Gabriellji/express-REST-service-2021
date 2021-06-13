@@ -11,8 +11,11 @@
   "scripts": {
     "docs": "jsdoc -c ./jsdocs.conf.json",
     "clean": "rimraf build & rimraf *.tsbuildinfo",
+    "build": "tsc",
+    "watch:build": "tsc --watch",
     "dev": "nodemon -L src/server.ts",
-    "start": "nodemon -L --exitcrash src/server.ts",
+    "watch:server": "nodemon './build/server.js' --L './build'",
+    "start": "npm-run-all clean build --parallel watch:build watch:server --print-label",
     "lint": "eslint --ext .js,.ts --fix src/",
     "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace --runInBand",
     "test:auth": "cross-env DEBUG=rs:* TEST_MODE=auth jest --noStackTrace"
