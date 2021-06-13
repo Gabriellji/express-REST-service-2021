@@ -2,6 +2,9 @@ version: '3'
 services:
     app:
         build: .
+        volumes: 
+            - ./src:/usr/src/app/src
+            - /usr/src/app/node_modules
         network_mode: my-net
         ports:
             - ${PORT}:${PORT}
@@ -11,9 +14,6 @@ services:
             PORT: ${PORT}
     db:
         image: postgres
-        volumes: 
-            - ./src:/usr/src/app/src
-            - /usr/src/app/node_modules
         network_mode: my-net
         restart: on-failure
         build: ./database
