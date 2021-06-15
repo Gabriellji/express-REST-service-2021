@@ -19,19 +19,19 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
-    "noPropertyAccessFromIndexSignature": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
   },
   "exclude": [
-    "node_modules/"
+    "node_modules/",
   ],
   "include": [
     "./src/**/*.ts",
-    "src/common/config.ts"
+    "src/config/database.ts",
+    "./ormconfig.js"
   ]
 }

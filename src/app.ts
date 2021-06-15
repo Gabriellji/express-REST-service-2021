@@ -7,6 +7,7 @@ import boardRouter from './resources/boards/board.router';
 import taskRouter from './resources/tasks/task.router';
 import { logger } from './common/logger';
 import { logInfo, errorHandler } from './middlewares/error-handler';
+import 'reflect-metadata';
 
 const app = express();
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
