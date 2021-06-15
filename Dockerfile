@@ -1,8 +1,6 @@
-FROM node:14.17-alpine
+FROM node:14.17-alpine3.13
 
-RUN mkdir -p /usr/src/app
-
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -12,6 +10,6 @@ COPY . .
 
 EXPOSE 4000
 
-RUN npm install -g nodemon
+RUN npx tsc
 
-CMD ["npm", "run", "start"]
+CMD ["node", "./build/server.js"]
