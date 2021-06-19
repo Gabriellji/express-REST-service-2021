@@ -1,10 +1,12 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 import { IUser } from '../interfaces/interfaces';
-import { Board } from './board.entity';
+// import { Board } from './board.entity';
 
 @Entity()
 export class User implements IUser {
-  @PrimaryGeneratedColumn('uuid')
+  @PrimaryGeneratedColumn('uuid', {
+    name: 'id',
+  })
   id!: string;
 
   @Column({
@@ -18,6 +20,6 @@ export class User implements IUser {
   @Column()
   password!: string;
 
-  @OneToMany(() => Board, (board) => board.user)
-  boards!: Board[];
+  //   @OneToMany(() => Board, (board) => board.user)
+  //   boards!: Board[];
 }

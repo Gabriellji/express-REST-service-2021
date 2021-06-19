@@ -4,3 +4,6 @@
 {"level":"error","message":"   captured error: Cannot set headers after they are sent to the client"}
 {"level":"error","message":"   captured error: tokens.host is not a function"}
 {"message":"   {\"status\":400,\"message\":\"Bad Request\"}","level":"error"}
+{"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
+{"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
+{"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}

@@ -2,12 +2,12 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
-  OneToMany,
-  ManyToOne,
+  //   OneToMany,
+  //   ManyToOne,
 } from 'typeorm';
 import { IBoard } from '../interfaces/interfaces';
-import { Task } from './task.entity';
-import { User } from './user.entity';
+// import { Task } from './task.entity';
+// import { User } from './user.entity';
 
 @Entity()
 export class Board implements IBoard {
@@ -22,9 +22,9 @@ export class Board implements IBoard {
   @Column()
   columns!: number;
 
-  @ManyToOne(() => User, (user) => user.boards)
-  user: User = new User();
+  //   @ManyToOne(() => User, (user) => user.boards)
+  //   user!: User;
 
-  @OneToMany(() => Task, (task) => task.board)
-  tasks!: Task[];
+  //   @OneToMany(() => Task, (task) => task.board)
+  //   tasks!: Task[];
 }
