@@ -14,9 +14,9 @@ module.exports = [
     logging: true,
     name: 'default',
     synchronize: false,
-    entities: ['dist/src/entities/*.entity.js'],
+    entities: ['build/entities/*.entity.js'],
     migrationsTableName: '__migrations',
-    migrations: ['dist/src/migration/*.js'],
+    migrations: ['build/migration/*.js'],
     cli: {
       migrationsDir: 'src/migration',
     },
