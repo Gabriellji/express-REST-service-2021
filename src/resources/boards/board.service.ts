@@ -1,49 +1,35 @@
-import { IBoard } from '../../interfaces/interfaces';
-import { Board, BoardToUpdate } from '../../types/types';
-import {
-  get,
-  getById,
-  create,
-  update,
-  remove,
-} from './board.memory.repository';
-/**
- * Returns the result of getAll function
- * @returns {IBoard[]} array of Objects (board entities)
- */
-const getAll = (): Promise<IBoard[]> => get();
+import { getRepository } from 'typeorm';
+import { Board } from '../../entities/board.entity';
 
-/**
- * Returns the result of getBoardById function
- * @param {String} id String
- * @returns {IBoard} Object of borard entity
- */
-const getBoardById = async (id: string): Promise<Board> => {
-  const board = await getById(id);
+const getAllBoards = (): Promise<Board[]> => {
+  return getRepository(Board).find();
+};
+
+const getBoardById = async (id: string): Promise<Board | undefined> => {
+  const board = await getRepository(Board).findOne(id);
   return board;
 };
 
-/**
- * Call a function from board repository module
- * @param {Object} board Object with request body params
- * @returns {Void} Nothing
- */
-const createBoard = async (board: IBoard): Promise<Board> => create(board);
-/**
- * Call a function from board repository module
- * @param {String} id String
- * @param {Object} data Object with updated props
- * @returns {Void} Nothing
- */
-const updateBoard = async (id: string, data: BoardToUpdate): Promise<Board> =>
-  update(id, data);
-/**
- * Call a function from board repository module
- * @param {String} id String
- * @returns {Void} Nothing
- */
-const deleteBoard = async (id: string): Promise<void> => {
-  await remove(id);
+const createBoard = async (data: Board): Promise<Board> => {
+  const newBoard: Board = await getRepository(Board).create({
+    ...data,
+  });
+  const results = await getRepository(Board).save(newBoard);
+  return results;
 };
 
-export { getAll, getBoardById, createBoard, updateBoard, deleteBoard };
+const updateBoard = async (id: string, updatedBoard: Board): Promise<Board> => {
+  const boardToUpdate = await getRepository(Board).findOne(id);
+  if (!boardToUpdate) {
+    throw new Error('Board not found');
+  }
+  getRepository(Board).merge(boardToUpdate, updatedBoard);
+  const boardToSave = await getRepository(Board).save(boardToUpdate);
+  return boardToSave;
+};
+
+const deleteBoard = async (id: string): Promise<void> => {
+  await getRepository(Board).delete(id);
+};
+
+export { getAllBoards, getBoardById, createBoard, updateBoard, deleteBoard };

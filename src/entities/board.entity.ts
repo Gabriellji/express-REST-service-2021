@@ -30,7 +30,9 @@ export class Board implements IBoard {
   @Column({ type: 'json', array: false })
   columns: Array<{ title: string; order: number }>;
 
-  @OneToMany((_type) => Task, (task) => task.board)
+  @OneToMany((_type) => Task, (task) => task.board, {
+    cascade: true,
+  })
   tasks: Task[];
 
   //   @OneToOne(() => Column)
