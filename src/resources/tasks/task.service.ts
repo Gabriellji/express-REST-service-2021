@@ -31,16 +31,4 @@ const removeTask = async (id: string): Promise<void> => {
   await getRepository(Task).delete(id);
 };
 
-// const deleteTasksByBoardId = async (id: string): Promise<void> => {
-//   const tasks = await getRepository(Task).find({ where: { boardId: id } });
-//   await Promise.all(tasks.map((task) => deleteTask(task.id)));
-// };
-
-export {
-  getAllTasks,
-  getTaskById,
-  createTask,
-  updateTask,
-  removeTask,
-  // deleteTasksByBoardId,
-};
+export { getAllTasks, getTaskById, createTask, updateTask, removeTask };

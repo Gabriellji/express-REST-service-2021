@@ -2,8 +2,6 @@ import { UserToResponse } from 'src/types/types';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { IUser } from '../interfaces/interfaces';
 import { Task } from './task.entity';
-// import { Board } from './board.entity';
-
 @Entity()
 export class User implements IUser {
   @PrimaryGeneratedColumn('uuid', {

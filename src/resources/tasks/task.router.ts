@@ -4,11 +4,9 @@ import {
   getTaskById,
   createTask,
   updateTask,
-  // removeTask,
+  removeTask,
 } from './task.service';
 import { HttpCodes, StatusMsg } from '../../enums/enums';
-import { getRepository } from 'typeorm';
-import { Task } from '../../entities/task.entity';
 
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED, NO_CONTENT } = HttpCodes;
 const { SERVER_ERROR_MSG, NOT_FOUND_MSG, NO_CONTENT_MSG } = StatusMsg;
@@ -76,7 +74,7 @@ router.delete('/:boardId/tasks/:taskId', async (req, res) => {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
     console.log(taskId);
-    await getRepository(Task).delete(taskId);
+    await removeTask(taskId);
     return res.status(NO_CONTENT).send(NO_CONTENT_MSG);
   } catch (err) {
     console.error(err.message);

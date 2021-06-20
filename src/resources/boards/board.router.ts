@@ -78,13 +78,6 @@ router.delete('/:id', async (req: Request, res: Response) => {
     }
     await deleteBoard(id);
     return res.status(NO_CONTENT).send(NO_CONTENT_MSG);
-    // const board = getBoardById(id);
-    // if (!board) {
-    //   return res.status(NOT_FOUND);
-    // }
-    // await deleteBoard(id);
-    // await deleteTasksByBoardId(id);
-    // return res.status(OK).json(board);
   } catch (err) {
     console.error(err.message);
     return res.status(SERVER_ERROR).send('Server error');
