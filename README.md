@@ -23,13 +23,20 @@ docker run -p 4000:4000 express-app
 
 .env example
 
+# NOTE!
+### if you wanna run app in local 
+```POSTGRES_HOST=localhost```
+
 ```
 NODE_ENV=development
-PORT=
-POSTGRES_PORT=
+PORT=4000
+POSTGRES_HOST=host.docker.internal
+POSTGRES_PORT=5433
 POSTGRES_USER=
 POSTGRES_PASSWORD=
 POSTGRES_DB=
+PGDATA=
+RUN_MIGRATIONS=true
 ```
 
 ## Testing
