@@ -23,11 +23,8 @@ export class User implements IUser {
   @OneToMany((_type) => Task, (task) => task.user)
   tasks: Task[];
 
-  static toResponse(user: IUser): UserToResponse {
+  static toResponse(user: User): UserToResponse {
     const { id, name, login } = user;
     return { id, name, login };
   }
-
-  //   @OneToMany(() => Board, (board) => board.user)
-  //   boards!: Board[];
 }
