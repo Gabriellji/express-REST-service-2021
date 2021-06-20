@@ -1,6 +1,7 @@
 import { UserToResponse } from 'src/types/types';
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { IUser } from '../interfaces/interfaces';
+import { Task } from './task.entity';
 // import { Board } from './board.entity';
 
 @Entity()
@@ -10,9 +11,7 @@ export class User implements IUser {
   })
   id: string;
 
-  @Column({
-    length: 100,
-  })
+  @Column()
   name: string;
 
   @Column()
@@ -20,6 +19,9 @@ export class User implements IUser {
 
   @Column({ select: false })
   password: string;
+
+  @OneToMany((_type) => Task, (task) => task.user)
+  tasks: Task[];
 
   static toResponse(user: IUser): UserToResponse {
     const { id, name, login } = user;

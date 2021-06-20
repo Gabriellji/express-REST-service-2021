@@ -2,10 +2,12 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
+  OneToMany,
   //   OneToMany,
   //   ManyToOne,
 } from 'typeorm';
 import { IBoard } from '../interfaces/interfaces';
+import { Task } from './task.entity';
 // import { Task } from './task.entity';
 // import { User } from './user.entity';
 
@@ -27,6 +29,9 @@ export class Board implements IBoard {
 
   @Column({ type: 'json', array: false })
   columns: Array<{ title: string; order: number }>;
+
+  @OneToMany((_type) => Task, (task) => task.board)
+  tasks: Task[];
 
   //   @OneToOne(() => Column)
   //   @JoinColumn()
