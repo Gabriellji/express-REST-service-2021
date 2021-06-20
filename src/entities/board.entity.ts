@@ -11,16 +11,26 @@ import { IBoard } from '../interfaces/interfaces';
 
 @Entity()
 export class Board implements IBoard {
-  @PrimaryGeneratedColumn('uuid')
-  id!: string;
+  @PrimaryGeneratedColumn('uuid', {
+    name: 'id',
+  })
+  id: string;
 
   @Column({
     length: 100,
   })
-  title!: string;
+  title: string;
 
-  @Column()
-  columns!: number;
+  //   @Column('int', { array: true })
+  //   // eslint-disable-next-line @typescript-eslint/ban-types
+  //   columns: [order: number, title: string];
+
+  @Column({ type: 'json', array: false })
+  columns: Array<{ title: string; order: number }>;
+
+  //   @OneToOne(() => Column)
+  //   @JoinColumn()
+  //   columns: Columns[];
 
   //   @ManyToOne(() => User, (user) => user.boards)
   //   user!: User;

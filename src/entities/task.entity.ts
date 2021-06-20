@@ -36,7 +36,9 @@ export class Task implements ITask {
 
   //   @ManyToOne(() => Board, (board) => board.tasks)
   //   board!: Board;
-  @ManyToOne((_type) => User)
+  @ManyToOne((_type) => User, {
+    cascade: ['update'],
+  })
   @JoinColumn([{ name: 'userId', referencedColumnName: 'id' }])
   @ManyToOne((_type) => Board)
   @JoinColumn([{ name: 'boardId', referencedColumnName: 'id' }])

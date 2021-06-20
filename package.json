@@ -17,6 +17,7 @@
     "watch:server": "nodemon './build/server.js' -L --exitcrash './build'",
     "start": "npm-run-all clean build --parallel watch:build watch:server --print-label",
     "lint": "eslint --ext .js,.ts --fix src/",
+    "db:create": "typeorm migration:generate -- -n",
       "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./ormconfig.js",
     "test": "cross-env DEBUG=rs:* jest --testMatch \"<rootDir>/test/e2e/test/*.test.js\" --noStackTrace --runInBand",
     "test:auth": "cross-env DEBUG=rs:* TEST_MODE=auth jest --noStackTrace"
