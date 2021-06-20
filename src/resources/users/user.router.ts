@@ -79,16 +79,7 @@ router.delete('/:id', async (req: Request, res: Response) => {
     if (!id) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
-    // const tasks = await getRepository(Task).find({});
-    // await entityManager
-    // await getConnection().transaction(async (transactionalEntityManager) => {
-    //   await transactionalEntityManager.update(
-    //     Task,
-    //     { userId: id },
-    //     { userId: id }
-    //   );
-    // });
-    await deleteUser(id);
+    deleteUser(id);
     return res.status(NO_CONTENT).send(NO_CONTENT_MSG);
   } catch (err) {
     console.error(err.message);

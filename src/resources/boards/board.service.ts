@@ -1,9 +1,10 @@
+import { Task } from '../../entities/task.entity';
 import { getRepository } from 'typeorm';
 import { Board } from '../../entities/board.entity';
+// import { deleteTasksByBoardId } from '../tasks/task.service';
 
-const getAllBoards = (): Promise<Board[]> => {
-  return getRepository(Board).find();
-};
+const getAllBoards = async (): Promise<Board[]> =>
+  await getRepository(Board).find();
 
 const getBoardById = async (id: string): Promise<Board | undefined> => {
   const board = await getRepository(Board).findOne(id);
@@ -11,7 +12,7 @@ const getBoardById = async (id: string): Promise<Board | undefined> => {
 };
 
 const createBoard = async (data: Board): Promise<Board> => {
-  const newBoard: Board = await getRepository(Board).create({
+  const newBoard: Board = getRepository(Board).create({
     ...data,
   });
   const results = await getRepository(Board).save(newBoard);
@@ -29,6 +30,13 @@ const updateBoard = async (id: string, updatedBoard: Board): Promise<Board> => {
 };
 
 const deleteBoard = async (id: string): Promise<void> => {
+  // await deleteTasksByBoardId(id);
+  getRepository(Task)
+    .createQueryBuilder()
+    .delete()
+    .where(`boardId = :boardId`, { boardId: id })
+    .execute();
+
   await getRepository(Board).delete(id);
 };
 

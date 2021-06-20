@@ -7,3 +7,4 @@
 {"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
 {"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
 {"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
+{"level":"error","message":"   Unhandled rejection detected: insert or update on table \"task\" violates foreign key constraint \"FK_f316d3fe53497d4d8a2957db8b9\""}

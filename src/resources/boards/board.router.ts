@@ -1,5 +1,3 @@
-// import express from 'express';
-// import Board from './board.model';
 import {
   getAllBoards,
   getBoardById,
@@ -7,12 +5,9 @@ import {
   updateBoard,
   deleteBoard,
 } from './board.service';
-// import { deleteTasksByBoardId } from '../tasks/task.service';
 import * as express from 'express';
 import { Request, Response } from 'express';
 import { HttpCodes, StatusMsg } from '../../enums/enums';
-// import { getRepository } from 'typeorm';
-// import { Board } from '../../entities/board.entity';
 
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED, NO_CONTENT } = HttpCodes;
 

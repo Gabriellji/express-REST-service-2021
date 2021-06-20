@@ -1,18 +1,9 @@
-// import {
-//   getAllUsers,
-//   getById,
-//   create,
-//   update,
-//   remove,
-// } from './user.memory.repository';
-
-// import { IUser } from '../../interfaces/interfaces';
-// import { User } from 'src/types/types';
-
+import { Task } from '../../entities/task.entity';
 import { getRepository } from 'typeorm';
 import { User } from '../../entities/user.entity';
 
-const getAllUsers = (): Promise<User[]> => getRepository(User).find();
+const getAllUsers = async (): Promise<User[]> =>
+  await getRepository(User).find();
 
 const getUserById = async (id: string): Promise<User | undefined> =>
   await getRepository(User).findOne(id);
@@ -39,6 +30,13 @@ const updateUser = async (id: string, updatedUser: User): Promise<User> => {
 };
 
 const deleteUser = async (id: string): Promise<void> => {
+  await getRepository(Task)
+    .createQueryBuilder()
+    .update()
+    .set({ userId: null })
+    .where(`userId = :userId`, { userId: id })
+    .execute();
+
   await getRepository(User).delete(id);
 };
 

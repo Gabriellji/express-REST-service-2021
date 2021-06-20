@@ -55,7 +55,7 @@ export class Task implements ITask {
   user: User;
 
   @Column({ nullable: false })
-  userId: string;
+  userId: string | null;
 
   @ManyToOne((_type) => Board, (board) => board.tasks, {
     onDelete: 'CASCADE', // <--- add this
