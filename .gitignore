@@ -4,3 +4,4 @@ build
 *.tsbuildinfo
 .env
 .DS_Store
+pgdata
