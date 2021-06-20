@@ -1,31 +1,36 @@
 # RS School REST service
 
-## Prerequisites
-
-- Git - [Download & Install Git](https://git-scm.com/downloads).
-- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
-
 ## Downloading
 
 ```
 git clone {repository URL}
 ```
 
-## Installing NPM modules
+## Running application using Docker
 
-```
-npm install
-```
-
-## Running application
-
-```
-npm start
+```bash
+docker compose up
 ```
 
-After starting the app on port (4000 as default) you can open
-in your browser OpenAPI documentation by typing http://localhost:4000/doc/.
-For more information about OpenAPI/Swagger please visit https://swagger.io/.
+An alternative pull docker image from [docker hub repository](https://hub.docker.com/repository/docker/2077354/express-app)
+
+```
+docker pull 2077354/express-app:latest
+```
+```
+docker run -p 4000:4000 express-app
+```
+
+.env example
+
+```
+NODE_ENV=development
+PORT=
+POSTGRES_PORT=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+```
 
 ## Testing
 

@@ -1,0 +1,30 @@
+version: '3'
+services:
+    app:
+        build: .
+        volumes: 
+            - ./src:/usr/src/app/src
+            - /usr/src/app/node_modules
+        network_mode: my-net
+        restart: on-failure
+        ports:
+            - ${PORT}:${PORT}
+        depends_on:
+            - db
+        environment: 
+            PORT: ${PORT}
+    db:
+        image: postgres
+        network_mode: my-net
+        restart: on-failure
+        build: ./database
+        ports: 
+            - ${POSTGRES_PORT}:${POSTGRES_PORT}
+        environment: 
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_PORT: ${POSTGRES_PORT}
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_DB: ${POSTGRES_DB}
+
+        
+        
