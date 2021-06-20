@@ -2,7 +2,7 @@ version: '3'
 services:
     app:
         build: .
-        command: npm run start
+        command: npm run dev
         volumes: 
             - ./logs:/app/logs
             - ./src:/app/src

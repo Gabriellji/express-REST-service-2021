@@ -25,31 +25,6 @@ export class Task implements ITask {
   @Column()
   description!: string;
 
-  //   @Column()
-  //   userId!: string;
-
-  //   @Column()
-  //   boardId!: string;
-
-  // @Column()
-  // columnId!: string;
-
-  //   @ManyToOne(() => Board, (board) => board.tasks)
-  //   board!: Board;
-  //   @ManyToOne((_type) => User, {
-  //     cascade: ['update'],
-  //   })
-  //   @JoinColumn([{ name: 'user_id', referencedColumnName: 'id' }])
-  //   userId: string;
-
-  //   @ManyToOne((_type) => Board)
-  //   @JoinColumn([{ name: 'board_id', referencedColumnName: 'id' }])
-  //   boardId: string;
-
-  //   @ManyToOne((_type) => Board)
-  //   @JoinColumn([{ name: 'column_id', referencedColumnName: 'id' }])
-  //   columnId: string;
-
   @ManyToOne((_type) => User, (user) => user.tasks)
   @JoinColumn({ name: 'userId' })
   user: User;

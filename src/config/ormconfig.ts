@@ -1,33 +1,34 @@
 import { ConnectionOptions } from 'typeorm';
+import commonConfig from '../common/config';
+import dotenv from 'dotenv';
+import path from 'path';
+const {
+  POSTGRES_HOST,
+  POSTGRES_PORT,
+  POSTGRES_USER,
+  POSTGRES_PASSWORD,
+  POSTGRES_DB,
+} = commonConfig;
 
-const common: ConnectionOptions = {
+dotenv.config({
+  path: path.join(__dirname, '../../.env'),
+});
+
+const config: ConnectionOptions = {
   type: 'postgres',
-  host: process.env.POSTGRES_HOST,
-  port: +!process.env.POSTGRES_PORT,
-  username: process.env.POSTGRES_USER,
-  password: process.env.POSTGRES_PASSWORD,
-  database: process.env.POSTGRES_DB,
-  migrationsRun: !process.env.RUN_MIGRATIONS,
+  host: POSTGRES_HOST || 'localhost',
+  port: Number(POSTGRES_PORT) || 5433,
+  username: POSTGRES_USER || 'postgres',
+  password: POSTGRES_PASSWORD || 'password',
+  database: POSTGRES_DB || 'postgres',
+  entities: [`${__dirname}/entities/*.entity.ts`],
+  synchronize: false,
+  migrationsRun: true,
+  connectTimeoutMS: 60000,
+  migrations: [`${__dirname}/migration/*.ts`],
+  cli: {
+    migrationsDir: 'src/migration',
+  },
 };
 
-module.exports = [
-  {
-    ...common,
-    logging: true,
-    name: 'default',
-    synchronize: false,
-    entities: ['build/entities/*.entity.js'],
-    migrationsTableName: '__migrations',
-    migrations: ['build/migration/*.js'],
-    cli: {
-      migrationsDir: 'src/migration',
-    },
-  },
-  {
-    ...common,
-    name: 'data-import',
-    entities: [`${__dirname}/src/entities/*.entity.ts`],
-    migrationsTableName: '__migrations',
-    migrations: [`${__dirname}/src/migration/*.ts`],
-  },
-];
+export default config;
