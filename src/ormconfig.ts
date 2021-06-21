@@ -1,5 +1,5 @@
 import { ConnectionOptions } from 'typeorm';
-import commonConfig from '../common/config';
+import commonConfig from './common/config';
 import dotenv from 'dotenv';
 import path from 'path';
 const {
@@ -11,7 +11,7 @@ const {
 } = commonConfig;
 
 dotenv.config({
-  path: path.join(__dirname, '../../.env'),
+  path: path.join(__dirname, '../.env'),
 });
 
 const config: ConnectionOptions = {
