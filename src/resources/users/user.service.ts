@@ -1,10 +1,7 @@
 import { Task } from '../../entities/task.entity';
 import { getRepository } from 'typeorm';
 import { User } from '../../entities/user.entity';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-
-import config from '../../common/config';
+import { getJWToken } from '../../services/token.services';
 
 const getAllUsers = async (): Promise<User[]> =>
   await getRepository(User).find();
@@ -19,9 +16,7 @@ const createUser = async (user: User): Promise<User> => {
 
   const { password } = user;
 
-  const salt = await bcrypt.genSalt(10);
-
-  userToCreate.password = await bcrypt.hash(password, salt);
+  userToCreate.password = await User.hashPassword(password);
 
   console.log(userToCreate.password);
 
@@ -34,13 +29,7 @@ const createUser = async (user: User): Promise<User> => {
     },
   };
 
-  console.log(payload, 'PAYLOAD');
-
-  if (!config.JWT_SECRET_KEY) {
-    throw new Error('rrrrr');
-  }
-
-  jwt.sign(payload, config.JWT_SECRET_KEY, { expiresIn: 360000 });
+  getJWToken(payload.user.userId);
 
   return newUser;
 };

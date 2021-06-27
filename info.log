@@ -5127,3 +5127,54 @@
 {"level":"info","message":"    Server is running on port"}
 {"message":"    We are connected to DB","level":"info"}
 {"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[129ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[137ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[133ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[92ms]\"}","level":"info"}

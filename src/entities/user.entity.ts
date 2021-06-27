@@ -27,11 +27,16 @@ export class User implements IUser {
     return { id, name, login };
   }
 
-  hashPassword(): void {
-    this.password = bcrypt.hashSync(this.password, 8);
+  static async hashPassword(password: string): Promise<string> {
+    const salt = await bcrypt.genSalt(10);
+    const pass = bcrypt.hashSync(password, salt);
+    return pass;
   }
 
-  checkIfUnencryptedPasswordIsValid(unencryptedPassword: string): boolean {
-    return bcrypt.compareSync(unencryptedPassword, this.password);
+  static checkIfUnencryptedPasswordIsValid(
+    unencryptedPassword: string,
+    password: string
+  ): boolean {
+    return bcrypt.compareSync(unencryptedPassword, password);
   }
 }
