@@ -108,6 +108,7 @@ router.put('/:id', isAuthenticated, async (req: Request, res: Response) => {
 router.delete('/:id', isAuthenticated, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
+    console.log(id);
     if (!id) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
