@@ -8,7 +8,7 @@ export class User implements IUser {
   @PrimaryGeneratedColumn('uuid', {
     name: 'id',
   })
-  id: string;
+  id?: string;
 
   @Column()
   name: string;
@@ -20,7 +20,7 @@ export class User implements IUser {
   password: string;
 
   @OneToMany((_type) => Task, (task) => task.user)
-  tasks: Task[];
+  tasks?: Task[];
 
   static toResponse(user: User): UserToResponse {
     const { id, name, login } = user;

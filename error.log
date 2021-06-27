@@ -36,3 +36,4 @@
 {"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
 {"level":"error","message":"   Unhandled rejection detected: invalid input syntax for type uuid: \"12345\""}
 {"level":"error","message":"   Unhandled rejection detected: invalid input syntax for type uuid: \"12345\""}
+{"message":"   {\"status\":400,\"message\":\"Bad Request\"}","level":"error"}

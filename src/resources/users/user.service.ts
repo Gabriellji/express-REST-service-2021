@@ -24,10 +24,8 @@ const userLogin = async (user: User, pass: string): Promise<string> => {
   await bcrypt.compare(password, pass);
 
   const payload = {
-    user: {
-      userId: user.id,
-      login: user.login,
-    },
+    userId: user.id,
+    login: user.login,
   };
 
   const token = jwt.sign(payload, config.JWT_SECRET_KEY, {
@@ -37,7 +35,7 @@ const userLogin = async (user: User, pass: string): Promise<string> => {
   return token;
 };
 
-const registerUser = async (user: User): Promise<User> => {
+const createUser = async (user: User): Promise<User> => {
   const userToCreate = getRepository(User).create({
     ...user,
   });
@@ -45,31 +43,6 @@ const registerUser = async (user: User): Promise<User> => {
   const { password } = user;
 
   userToCreate.password = await User.hashPassword(password);
-
-  const newUser = await getRepository(User).save(userToCreate);
-
-  const payload = {
-    user: {
-      userId: newUser.id,
-      login: user.login,
-    },
-  };
-
-  if (!config.JWT_SECRET_KEY) {
-    throw new Error('rrrrr');
-  }
-
-  jwt.sign(payload, config.JWT_SECRET_KEY, {
-    expiresIn: expirationPeriod,
-  });
-
-  return newUser;
-};
-
-const createUser = async (user: User): Promise<User> => {
-  const userToCreate = getRepository(User).create({
-    ...user,
-  });
 
   const newUser = await getRepository(User).save(userToCreate);
   return newUser;
@@ -99,6 +72,19 @@ const deleteUser = async (id: string): Promise<void> => {
   await getRepository(User).delete(id);
 };
 
+const createAdmin = async (): Promise<void> => {
+  const admin = await getUserByEmail('admin');
+  if (!admin) {
+    const a = {
+      name: 'admin',
+      login: 'admin',
+      password: 'admin',
+    };
+    await createUser({
+      ...a,
+    });
+  }
+};
 export {
   getAllUsers,
   getUserById,
@@ -106,6 +92,6 @@ export {
   updateUser,
   deleteUser,
   userLogin,
-  registerUser,
   getUserByEmail,
+  createAdmin,
 };

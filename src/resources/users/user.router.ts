@@ -11,7 +11,6 @@ import {
   createUser,
   updateUser,
   deleteUser,
-  registerUser,
 } from './user.service';
 
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED, NO_CONTENT } = HttpCodes;
@@ -66,18 +65,18 @@ router.get('/:id', isAuthenticated, async (req: Request, res: Response) => {
   }
 });
 
-router.post('/users', async (req: Request, res: Response) => {
-  try {
-    const results = await registerUser({ ...req.body });
+// router.post('/users', async (req: Request, res: Response) => {
+//   try {
+//     const results = await registerUser({ ...req.body });
 
-    return res.status(CREATED).json(User.toResponse(results));
-  } catch (err) {
-    console.error(err.message);
-    return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
-  }
-});
+//     return res.status(CREATED).json(User.toResponse(results));
+//   } catch (err) {
+//     console.error(err.message);
+//     return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+//   }
+// });
 
-router.post('/', isAuthenticated, async (req: Request, res: Response) => {
+router.post('/', async (req: Request, res: Response) => {
   try {
     const results = await createUser({ ...req.body });
 
