@@ -16,7 +16,7 @@ export class User implements IUser {
   @Column()
   login: string;
 
-  @Column({ select: false })
+  @Column()
   password: string;
 
   @OneToMany((_type) => Task, (task) => task.user)
@@ -36,7 +36,7 @@ export class User implements IUser {
   static checkIfUnencryptedPasswordIsValid(
     unencryptedPassword: string,
     password: string
-  ): boolean {
+  ) {
     return bcrypt.compareSync(unencryptedPassword, password);
   }
 }

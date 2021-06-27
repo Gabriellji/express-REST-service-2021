@@ -4,6 +4,8 @@ import { HttpCodes, StatusMsg } from '../../enums/enums';
 import { User } from '../../entities/user.entity';
 import {
   getAllUsers,
+  getUserByEmail,
+  userLogin,
   getUserById,
   createUser,
   updateUser,
@@ -14,6 +16,25 @@ const { SERVER_ERROR, NOT_FOUND, OK, CREATED, NO_CONTENT } = HttpCodes;
 const { SERVER_ERROR_MSG, NOT_FOUND_MSG, NO_CONTENT_MSG } = StatusMsg;
 
 const router = express.Router();
+
+router.post('/login', async (req: Request, res: Response) => {
+  try {
+    const { login, password } = req.body;
+
+    const user = await getUserByEmail(login);
+    console.log(user, 'USER');
+
+    if (!user) {
+      return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
+    }
+
+    const token = await userLogin(user, password);
+    return res.status(OK).json(token);
+  } catch (err) {
+    console.error(err.message);
+    return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+  }
+});
 
 router.get('/', async (_: Request, res: Response) => {
   try {

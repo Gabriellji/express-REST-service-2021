@@ -5178,3 +5178,70 @@
 {"message":"    We are connected to DB","level":"info"}
 {"level":"info","message":"    Server is running on port"}
 {"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[92ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[90ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[63ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[13ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"login\":\"email@test\",\"password\":\"*******\"},\"ms\":\"[63ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":400,\"params\":{},\"query\":{},\"body\":{\"login\":\"email@test\",\"password\":\"*******\"},\"ms\":\"[7ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[133ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[5ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[8ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[13ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[8ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[7ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[8ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[8ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[11ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[11ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[11ms]\"}","level":"info"}

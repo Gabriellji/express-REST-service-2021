@@ -2,12 +2,33 @@ import { Task } from '../../entities/task.entity';
 import { getRepository } from 'typeorm';
 import { User } from '../../entities/user.entity';
 import { getJWToken } from '../../services/token.services';
+import * as bcrypt from 'bcrypt';
 
 const getAllUsers = async (): Promise<User[]> =>
   await getRepository(User).find();
 
 const getUserById = async (id: string): Promise<User | undefined> =>
   await getRepository(User).findOne(id);
+
+const getUserByEmail = async (email: string): Promise<User | undefined> =>
+  await getRepository(User).findOne({ where: { login: email } });
+
+const userLogin = async (user: User, pass: string): Promise<string> => {
+  const { password } = user;
+
+  //User.checkIfUnencryptedPasswordIsValid(password, pass);
+  console.log(password, pass);
+  await bcrypt.compare(password, pass);
+
+  const payload = {
+    userId: user.id,
+    login: user.login,
+  };
+
+  const token = getJWToken(payload.userId);
+  console.log(token);
+  return token;
+};
 
 const createUser = async (user: User): Promise<User> => {
   const userToCreate = getRepository(User).create({
@@ -23,13 +44,11 @@ const createUser = async (user: User): Promise<User> => {
   const newUser = await getRepository(User).save(userToCreate);
 
   const payload = {
-    user: {
-      userId: newUser.id,
-      login: user.login,
-    },
+    userId: newUser.id,
+    login: user.login,
   };
 
-  getJWToken(payload.user.userId);
+  getJWToken(payload.userId);
 
   return newUser;
 };
@@ -58,4 +77,12 @@ const deleteUser = async (id: string): Promise<void> => {
   await getRepository(User).delete(id);
 };
 
-export { getAllUsers, getUserById, createUser, updateUser, deleteUser };
+export {
+  getAllUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser,
+  userLogin,
+  getUserByEmail,
+};
