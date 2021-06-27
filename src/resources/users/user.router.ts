@@ -1,24 +1,23 @@
-import express from 'express';
-import User from './user.model';
+import * as express from 'express';
+import { Request, Response } from 'express';
+import { HttpCodes, StatusMsg } from '../../enums/enums';
+import { User } from '../../entities/user.entity';
 import {
-  getAll,
-  getUser,
+  getAllUsers,
+  getUserById,
   createUser,
   updateUser,
   deleteUser,
 } from './user.service';
 
-import { HttpCodes, StatusMsg, RequiredError } from '../../enums/enums';
-
 const { SERVER_ERROR, NOT_FOUND, OK, CREATED, NO_CONTENT } = HttpCodes;
 const { SERVER_ERROR_MSG, NOT_FOUND_MSG, NO_CONTENT_MSG } = StatusMsg;
-const { PARAM_PEQUIRED } = RequiredError;
 
 const router = express.Router();
 
-router.get('/', async (_, res) => {
+router.get('/', async (_: Request, res: Response) => {
   try {
-    const users = await getAll();
+    const users = await getAllUsers();
     res.json(users.map(User.toResponse));
   } catch (err) {
     console.error(err.message);
@@ -26,13 +25,14 @@ router.get('/', async (_, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     if (!id) {
-      throw new Error(PARAM_PEQUIRED);
+      return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
-    const user = await getUser(id);
+
+    const user = await getUserById(id);
 
     if (!user) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
@@ -44,56 +44,46 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', async (req: Request, res: Response) => {
   try {
-    const { login, name, password } = req.body;
+    const results = await createUser({ ...req.body });
 
-    const user = await createUser(
-      new User({
-        name,
-        login,
-        password,
-      })
-    );
-    if (!user) {
-      throw new Error('Something went wrong...');
-    }
-    return res.status(CREATED).json(User.toResponse(user));
+    return res.status(CREATED).json(User.toResponse(results));
   } catch (err) {
     console.error(err.message);
     return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
   }
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
-    if (!id) {
-      throw new Error(PARAM_PEQUIRED);
-    }
     const updatedUser = req.body;
-    const user = await updateUser(id, updatedUser);
-    if (!user) {
+
+    if (!id) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
-    return res.status(OK).json(User.toResponse(user));
+
+    const userToSave = await updateUser(id, updatedUser);
+
+    return res.status(OK).json(userToSave);
   } catch (err) {
     console.error(err.message);
     return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
   }
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     if (!id) {
-      throw new Error(PARAM_PEQUIRED);
+      return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }
-    await deleteUser(id);
-    res.status(NO_CONTENT).send(NO_CONTENT_MSG);
+    deleteUser(id);
+    return res.status(NO_CONTENT).send(NO_CONTENT_MSG);
   } catch (err) {
     console.error(err.message);
-    res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+    return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
   }
 });
 

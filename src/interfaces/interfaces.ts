@@ -17,7 +17,12 @@ export interface ITask {
 export interface IBoard {
   id: string;
   title: string;
-  columns: number;
+  columns: unknown;
+}
+
+export interface IColumn {
+  order: number;
+  title: string;
 }
 
 export interface IDB {

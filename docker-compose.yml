@@ -2,10 +2,13 @@ version: '3'
 services:
     app:
         build: .
+        command: npm run dev
         volumes: 
-            - ./src:/usr/src/app/src
-            - /usr/src/app/node_modules
-        network_mode: my-net
+            - ./logs:/app/logs
+            - ./src:/app/src
+            - /app/node_modules
+        networks:
+            - my-net
         restart: on-failure
         ports:
             - ${PORT}:${PORT}
@@ -14,10 +17,13 @@ services:
         environment: 
             PORT: ${PORT}
     db:
-        image: postgres
-        network_mode: my-net
+        image: postgres:13.3-alpine
+        networks:
+            - my-net
         restart: on-failure
-        build: ./database
+        build: ./src/database
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data
         ports: 
             - ${POSTGRES_PORT}:${POSTGRES_PORT}
         environment: 
@@ -25,6 +31,13 @@ services:
             POSTGRES_PORT: ${POSTGRES_PORT}
             POSTGRES_USER: ${POSTGRES_USER}
             POSTGRES_DB: ${POSTGRES_DB}
+            PGDATA: ${PGDATA}
+
+networks:
+    my-net:
+        driver: bridge
+        name: my-net
+
 
         
         

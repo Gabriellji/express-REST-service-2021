@@ -4,3 +4,14 @@
 {"level":"error","message":"   captured error: Cannot set headers after they are sent to the client"}
 {"level":"error","message":"   captured error: tokens.host is not a function"}
 {"message":"   {\"status\":400,\"message\":\"Bad Request\"}","level":"error"}
+{"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
+{"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
+{"level":"error","message":"   Unhandled rejection detected: relation \"user\" does not exist"}
+{"level":"error","message":"   Unhandled rejection detected: insert or update on table \"task\" violates foreign key constraint \"FK_f316d3fe53497d4d8a2957db8b9\""}
+{"level":"error","message":"   Unhandled rejection detected: No repository for \"Task\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+{"level":"error","message":"   Unhandled rejection detected: No repository for \"Task\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+{"level":"error","message":"   Unhandled rejection detected: No repository for \"Task\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+{"level":"error","message":"   Unhandled rejection detected: No repository for \"Task\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+{"level":"error","message":"   Unhandled rejection detected: No repository for \"Task\" was found. Looks like this entity is not registered in current \"default\" connection?"}
+{"level":"error","message":"   Unable to connect to db Error: getaddrinfo ENOTFOUND host.docker.internal","stack":"Error: Error: getaddrinfo ENOTFOUND host.docker.internal\n    at Object.connectToDb (/Users/gabriellji/Documents/study/nodejs-rsschool-2021/express-REST-service-2021/src/common/db.ts:10:11)\n    at processTicksAndRejections (node:internal/process/task_queues:93:5)"}
+{"level":"error","message":"   Unable to connect to db QueryFailedError: relation \"user\" already exists","stack":"Error: QueryFailedError: relation \"user\" already exists\n    at Object.connectToDb (/Users/gabriellji/Documents/study/nodejs-rsschool-2021/express-REST-service-2021/src/common/db.ts:11:11)\n    at processTicksAndRejections (node:internal/process/task_queues:93:5)"}

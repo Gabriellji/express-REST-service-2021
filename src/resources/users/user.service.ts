@@ -1,48 +1,43 @@
-import {
-  getAllUsers,
-  getById,
-  create,
-  update,
-  remove,
-} from './user.memory.repository';
+import { Task } from '../../entities/task.entity';
+import { getRepository } from 'typeorm';
+import { User } from '../../entities/user.entity';
 
-import { IUser } from '../../interfaces/interfaces';
-import { User } from 'src/types/types';
+const getAllUsers = async (): Promise<User[]> =>
+  await getRepository(User).find();
 
-/**
- * Returns the result of getAll function
- * @returns {IUser[]} array of user entities
- */
-const getAll = (): Promise<IUser[]> => getAllUsers();
+const getUserById = async (id: string): Promise<User | undefined> =>
+  await getRepository(User).findOne(id);
 
-/**
- * Returns the result of getUserById function
- * @param {String} id user id
- * @returns {IUser} user entity that matched the id
- */
-const getUser = async (id: string): Promise<User> => getById(id);
+const createUser = async (user: User): Promise<User> => {
+  const userToCreate = getRepository(User).create({
+    ...user,
+  });
+  const newUser = await getRepository(User).save(userToCreate);
+  return newUser;
+};
 
-/**
- * Returns the result of createUser function
- * @param {IUser} user Object with request body params
- * @returns {IUser} created user entity
- */
-const createUser = async (user: IUser): Promise<User> => create(user);
+const updateUser = async (id: string, updatedUser: User): Promise<User> => {
+  const userToUpdate = await getRepository(User).findOne(id);
 
-/**
- * Returns the result of updateUser function
- * @param {String} id user id
- * @param {IUser} user Object with request body params
- * @returns {IUser} updated user entity
- */
-const updateUser = async (id: string, user: IUser): Promise<IUser> =>
-  update(id, user);
+  if (!userToUpdate) {
+    throw new Error('User not found');
+  }
 
-/**
- * Call deleteUser function
- * @param {String} id user id
- * @returns {Void} Nothing
- */
-const deleteUser = async (id: string): Promise<void> => remove(id);
+  getRepository(User).merge(userToUpdate, updatedUser);
 
-export { getAll, getUser, createUser, updateUser, deleteUser };
+  const userToSave = await getRepository(User).save(userToUpdate);
+  return userToSave;
+};
+
+const deleteUser = async (id: string): Promise<void> => {
+  await getRepository(Task)
+    .createQueryBuilder()
+    .update()
+    .set({ userId: null })
+    .where(`userId = :userId`, { userId: id })
+    .execute();
+
+  await getRepository(User).delete(id);
+};
+
+export { getAllUsers, getUserById, createUser, updateUser, deleteUser };

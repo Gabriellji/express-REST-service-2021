@@ -1,69 +1,34 @@
-import { ITask } from '../../interfaces/interfaces';
-import { Task } from '../../types/types';
-import {
-  get,
-  getById,
-  create,
-  update,
-  remove,
-  deleteByBoardId,
-} from './task.memory.repository';
+import { getRepository } from 'typeorm';
+import { Task } from '../../entities/task.entity';
 
-/**
- * Returns the result of getAll function
- * @returns {ITask[]} array of Objects ( task entities )
- */
-const getAll = (): Promise<ITask[]> => get();
+const getAllTasks = async (): Promise<Task[]> =>
+  await getRepository(Task).find();
 
-/**
- * Returns the result of getTaskById function
- * @param {String} id task id
- * @returns {ITask} Object of task entity that matched the id
- */
-const getTask = async (id: string): Promise<Task> => {
-  const task = await getById(id);
+const getTaskById = async (id: string): Promise<Task | undefined> => {
+  const task = await getRepository(Task).findOne(id);
   return task;
 };
 
-/**
- * Call a function from task repository module
- * @param {Object} task Object with request body params
- * @returns {ITask} Nothing
- */
-const createTask = async (task: ITask): Promise<Task> => create(task);
-/**
- * Call a function from task repository module
- * @param {String} id task id
- * @param {Object} data Object with updated props
- * @returns {Void} Nothing
- */
-const updateTask = async (
-  id: string,
-  data: ITask
-): Promise<ITask | undefined> => update(id, data);
-/**
- * Call a function from task repository module
- * @param {String} id task id
- * @returns {Void} Nothing
- */
-const deleteTask = async (id: string): Promise<void> => {
-  await remove(id);
+const createTask = async (data: Task): Promise<Task> => {
+  const newTask: Task = getRepository(Task).create({
+    ...data,
+  });
+  const results = await getRepository(Task).save(newTask);
+  return results;
 };
 
-/**
- * Call a function from task repository module
- * @param {String} id board id
- * @returns {Void} Nothing
- */
-const deleteTasksByBoardId = async (id: string): Promise<void> => {
-  await deleteByBoardId(id);
+const updateTask = async (id: string, updatedTask: Task): Promise<Task> => {
+  const taskToUpdate = await getRepository(Task).findOne(id);
+  if (!taskToUpdate) {
+    throw new Error('Task not found');
+  }
+  getRepository(Task).merge(taskToUpdate, updatedTask);
+  const taskToSave = await getRepository(Task).save(taskToUpdate);
+  return taskToSave;
 };
 
-export {
-  getAll,
-  getTask,
-  createTask,
-  updateTask,
-  deleteTask,
-  deleteTasksByBoardId,
+const removeTask = async (id: string): Promise<void> => {
+  await getRepository(Task).delete(id);
 };
+
+export { getAllTasks, getTaskById, createTask, updateTask, removeTask };
