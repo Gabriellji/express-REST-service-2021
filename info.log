@@ -5116,3 +5116,14 @@
 {"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/6846fa88-023e-4276-a33c-2f1ea95ad4fc/tasks/f3778ccf-e336-4074-a51f-2e10c876deef\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
 {"message":"    {\"method\":\"GET\",\"url\":\"/boards/6846fa88-023e-4276-a33c-2f1ea95ad4fc/tasks/f3778ccf-e336-4074-a51f-2e10c876deef\",\"statusCode\":404,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
 {"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/6846fa88-023e-4276-a33c-2f1ea95ad4fc\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[2ms]\"}","level":"info"}
+{"level":"error","message":"   Unable to connect to db Error: getaddrinfo ENOTFOUND host.docker.internal","stack":"Error: Error: getaddrinfo ENOTFOUND host.docker.internal\n    at Object.connectToDb (/Users/gabriellji/Documents/study/nodejs-rsschool-2021/express-REST-service-2021/src/common/db.ts:12:11)\n    at processTicksAndRejections (internal/process/task_queues.js:94:5)"}
+{"message":"    We are connected to DB","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[123ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"gab.test@test.com\",\"password\":\"*******\"},\"ms\":\"[129ms]\"}","level":"info"}
