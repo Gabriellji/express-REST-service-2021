@@ -52,6 +52,7 @@ app.use(errorHandler);
 app.use('/login', loginRouter);
 
 app.use(isAuthenticated);
+
 app.use('/users', userRouter);
 app.use('/boards', [boardRouter, taskRouter]);
 

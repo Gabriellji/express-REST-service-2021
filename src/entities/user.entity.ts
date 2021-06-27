@@ -19,7 +19,7 @@ export class User implements IUser {
   @Column()
   password: string;
 
-  @OneToMany((_type) => Task, (task) => task.user)
+  @OneToMany(() => Task, (task) => task.user)
   tasks?: Task[];
 
   static toResponse(user: User): UserToResponse {
@@ -31,12 +31,5 @@ export class User implements IUser {
     const salt = await bcrypt.genSalt(10);
     const pass = bcrypt.hashSync(password, salt);
     return pass;
-  }
-
-  static checkIfUnencryptedPasswordIsValid(
-    unencryptedPassword: string,
-    password: string
-  ) {
-    return bcrypt.compareSync(unencryptedPassword, password);
   }
 }

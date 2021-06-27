@@ -17,23 +17,23 @@ export class Task implements ITask {
   @Column({
     length: 100,
   })
-  title!: string;
+  title: string;
 
   @Column()
-  order!: number;
+  order: number;
 
   @Column()
-  description!: string;
+  description: string;
 
-  @ManyToOne((_type) => User, (user) => user.tasks)
+  @ManyToOne(() => User, (user) => user.tasks)
   @JoinColumn({ name: 'userId' })
   user: User;
 
   @Column({ nullable: false })
   userId: string | null;
 
-  @ManyToOne((_type) => Board, (board) => board.tasks, {
-    onDelete: 'CASCADE', // <--- add this
+  @ManyToOne(() => Board, (board) => board.tasks, {
+    onDelete: 'CASCADE',
   })
   @JoinColumn({ name: 'boardId' })
   board: Board;
