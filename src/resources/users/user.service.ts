@@ -1,8 +1,11 @@
 import { Task } from '../../entities/task.entity';
 import { getRepository } from 'typeorm';
 import { User } from '../../entities/user.entity';
-import { getJWToken } from '../../services/token.services';
+// import { getJWToken } from '../../services/token.services';
 import * as bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import config from '../../common/config';
+const expirationPeriod = '30d';
 
 const getAllUsers = async (): Promise<User[]> =>
   await getRepository(User).find();
@@ -15,22 +18,26 @@ const getUserByEmail = async (email: string): Promise<User | undefined> =>
 
 const userLogin = async (user: User, pass: string): Promise<string> => {
   const { password } = user;
-
-  //User.checkIfUnencryptedPasswordIsValid(password, pass);
-  console.log(password, pass);
+  if (!config.JWT_SECRET_KEY) {
+    throw new Error('rrrrr');
+  }
   await bcrypt.compare(password, pass);
 
   const payload = {
-    userId: user.id,
-    login: user.login,
+    user: {
+      userId: user.id,
+      login: user.login,
+    },
   };
 
-  const token = getJWToken(payload.userId);
-  console.log(token);
+  const token = jwt.sign(payload, config.JWT_SECRET_KEY, {
+    expiresIn: expirationPeriod,
+  });
+
   return token;
 };
 
-const createUser = async (user: User): Promise<User> => {
+const registerUser = async (user: User): Promise<User> => {
   const userToCreate = getRepository(User).create({
     ...user,
   });
@@ -39,17 +46,32 @@ const createUser = async (user: User): Promise<User> => {
 
   userToCreate.password = await User.hashPassword(password);
 
-  console.log(userToCreate.password);
-
   const newUser = await getRepository(User).save(userToCreate);
 
   const payload = {
-    userId: newUser.id,
-    login: user.login,
+    user: {
+      userId: newUser.id,
+      login: user.login,
+    },
   };
 
-  getJWToken(payload.userId);
+  if (!config.JWT_SECRET_KEY) {
+    throw new Error('rrrrr');
+  }
 
+  jwt.sign(payload, config.JWT_SECRET_KEY, {
+    expiresIn: expirationPeriod,
+  });
+
+  return newUser;
+};
+
+const createUser = async (user: User): Promise<User> => {
+  const userToCreate = getRepository(User).create({
+    ...user,
+  });
+
+  const newUser = await getRepository(User).save(userToCreate);
   return newUser;
 };
 
@@ -84,5 +106,6 @@ export {
   updateUser,
   deleteUser,
   userLogin,
+  registerUser,
   getUserByEmail,
 };

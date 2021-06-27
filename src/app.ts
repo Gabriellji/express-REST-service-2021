@@ -7,6 +7,7 @@ import boardRouter from './resources/boards/board.router';
 import taskRouter from './resources/tasks/task.router';
 import { logger } from './common/logger';
 import { logInfo, errorHandler } from './middlewares/error-handler';
+import { isAuthenticated } from './middlewares/auth';
 import 'reflect-metadata';
 
 const app = express();
@@ -48,6 +49,7 @@ app.use(logInfo);
 app.use(errorHandler);
 
 app.use('/users', userRouter);
+app.use(isAuthenticated);
 app.use('/boards', [boardRouter, taskRouter]);
 
 export default app;

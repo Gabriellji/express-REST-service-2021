@@ -24,6 +24,7 @@ const verifyJWToken = (token: string): boolean => {
   }
   try {
     jwt.verify(token, JWT_SECRET_KEY);
+    console.log(jwt.verify(token, JWT_SECRET_KEY));
     return true;
   } catch (error) {
     return false;

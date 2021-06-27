@@ -5245,3 +5245,381 @@
 {"message":"    We are connected to DB","level":"info"}
 {"level":"info","message":"    Server is running on port"}
 {"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[11ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[11ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[3ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"ppp.test@test.com\",\"password\":\"*******\"},\"ms\":\"[139ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"jhgyg\",\"login\":\"l.test@test.com\",\"password\":\"*******\"},\"ms\":\"[124ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"l.test@test.com\",\"password\":\"*******\"},\"ms\":\"[13ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"full_name\":\"superuser\",\"username\":\"superzumba\",\"password\":\"*******\",\"email\":\"zumba@test.com\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"full_name\":\"superuser\",\"username\":\"superzumba\",\"password\":\"*******\",\"email\":\"zumba@test.com\"},\"ms\":\"[69ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"full_name\":\"superuser\",\"username\":\"superzumba\",\"password\":\"*******\",\"email\":\"zumba@test.com\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"full_name\":\"superuser\",\"username\":\"superzumba\",\"password\":\"*******\",\"email\":\"zumba@test.com\"},\"ms\":\"[7ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"l.test@test.com\",\"password\":\"*******\"},\"ms\":\"[14ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"admin\",\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[149ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[94ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[2ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated task\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated board\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[159ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/180a88d8-b340-48b7-b5ab-2941b93cdc44\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[2ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/180a88d8-b340-48b7-b5ab-2941b93cdc44\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[3ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/123\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[170ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[73ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[147ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/12345\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[2ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/14638ce1-8203-464b-b0bb-9221a1a3ddd3\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/12345\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"level":"error","message":"   Unhandled rejection detected: invalid input syntax for type uuid: \"12345\""}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[14ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[13ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/123\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[101ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[159ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[80ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/cb84f337-7a00-4f39-97cc-e404c6af13df\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[3ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated board\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/cb84f337-7a00-4f39-97cc-e404c6af13df\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[5ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/12345\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[17ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/12345\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[88ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/0334713e-6c93-4716-bac5-d60594ff84fa\",\"statusCode\":204,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[3ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/123\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[2ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[150ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated task\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[80ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/4ec7f883-05a2-4ec9-98a3-aa98900cf774\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated board\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[73ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/d7a4d3a1-f53a-46c0-9aac-ec63ef8d8819\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[71ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/aef82983-e255-4d27-a102-4d5be2a7450e\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"Autotest updated TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\",\"id\":\"aef82983-e255-4d27-a102-4d5be2a7450e\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[71ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/a690737f-4af2-4311-8710-2ba7c479eb11\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[72ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[6ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/123\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"Autotest updated TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated board\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated task\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[4ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/123\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated task\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"Autotest updated TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated board\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"l.test@test.com\",\"password\":\"*******\"},\"ms\":\"[68ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"full_name\":\"superuser\",\"username\":\"superzumba\",\"password\":\"*******\",\"email\":\"zumba@test.com\"},\"ms\":\"[4ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users/123\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[3ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/12345/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/12345/tasks/12345\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[2ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards/undefined/tasks\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest task\",\"order\":0,\"description\":\"Lorem ipsum\",\"userId\":null,\"boardId\":null,\"columnId\":null},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated task\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards/undefined/tasks/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/login\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"login\":\"admin\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"msg\":\"No token, authorization denied\",\"title\":\"Autotest updated board\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/boards\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"title\":\"Autotest board\",\"columns\":[{\"title\":\"Backlog\",\"order\":1},{\"title\":\"Sprint\",\"order\":2}]},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/boards/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"PUT\",\"url\":\"/users/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"Autotest updated TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"DELETE\",\"url\":\"/users/undefined\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[0ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"TEST_USER\",\"login\":\"test_user\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"full_name\":\"superuser\",\"username\":\"superzumba\",\"password\":\"*******\",\"email\":\"zumba@test.com\"},\"ms\":\"[20ms]\"}","level":"info"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[69ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"GET\",\"url\":\"/boards\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{},\"ms\":\"[13ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/\",\"statusCode\":401,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\",\"password\":\"*******\"},\"ms\":\"[1ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/users\",\"statusCode\":201,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\",\"password\":\"*******\"},\"ms\":\"[138ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\"},\"ms\":\"[5ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\"},\"ms\":\"[3ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\"},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\"},\"ms\":\"[10ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\"},\"ms\":\"[84ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":500,\"params\":{},\"query\":{},\"body\":{\"name\":\"bfsghfg\",\"login\":\"fsnfsgnfsg\"},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    {\"method\":\"POST\",\"url\":\"/users/login\",\"statusCode\":200,\"params\":{},\"query\":{},\"body\":{\"login\":\"fsnfsgnfsg\",\"password\":\"*******\"},\"ms\":\"[9ms]\"}","level":"info"}
+{"message":"    We are connected to DB","level":"info"}
+{"level":"info","message":"    Server is running on port"}
