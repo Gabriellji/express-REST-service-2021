@@ -2,8 +2,11 @@ import * as express from 'express';
 import { Request, Response } from 'express';
 import { HttpCodes, StatusMsg } from '../../enums/enums';
 import { User } from '../../entities/user.entity';
+import { isAuthenticated } from '../../middlewares/auth';
 import {
   getAllUsers,
+  getUserByEmail,
+  userLogin,
   getUserById,
   createUser,
   updateUser,
@@ -15,7 +18,25 @@ const { SERVER_ERROR_MSG, NOT_FOUND_MSG, NO_CONTENT_MSG } = StatusMsg;
 
 const router = express.Router();
 
-router.get('/', async (_: Request, res: Response) => {
+router.post('/login', async (req: Request, res: Response) => {
+  try {
+    const { login, password } = req.body;
+
+    const user = await getUserByEmail(login);
+
+    if (!user) {
+      return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
+    }
+
+    const token = await userLogin(user, password);
+    return res.status(OK).json({ token });
+  } catch (err) {
+    console.error(err.message);
+    return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+  }
+});
+
+router.get('/', isAuthenticated, async (_: Request, res: Response) => {
   try {
     const users = await getAllUsers();
     res.json(users.map(User.toResponse));
@@ -25,7 +46,7 @@ router.get('/', async (_: Request, res: Response) => {
   }
 });
 
-router.get('/:id', async (req: Request, res: Response) => {
+router.get('/:id', isAuthenticated, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     if (!id) {
@@ -44,6 +65,17 @@ router.get('/:id', async (req: Request, res: Response) => {
   }
 });
 
+// router.post('/users', async (req: Request, res: Response) => {
+//   try {
+//     const results = await registerUser({ ...req.body });
+
+//     return res.status(CREATED).json(User.toResponse(results));
+//   } catch (err) {
+//     console.error(err.message);
+//     return res.status(SERVER_ERROR).send(SERVER_ERROR_MSG);
+//   }
+// });
+
 router.post('/', async (req: Request, res: Response) => {
   try {
     const results = await createUser({ ...req.body });
@@ -55,7 +87,7 @@ router.post('/', async (req: Request, res: Response) => {
   }
 });
 
-router.put('/:id', async (req: Request, res: Response) => {
+router.put('/:id', isAuthenticated, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const updatedUser = req.body;
@@ -73,9 +105,10 @@ router.put('/:id', async (req: Request, res: Response) => {
   }
 });
 
-router.delete('/:id', async (req: Request, res: Response) => {
+router.delete('/:id', isAuthenticated, async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
+    console.log(id);
     if (!id) {
       return res.status(NOT_FOUND).send(NOT_FOUND_MSG);
     }

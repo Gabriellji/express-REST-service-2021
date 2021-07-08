@@ -15,3 +15,25 @@
 {"level":"error","message":"   Unhandled rejection detected: No repository for \"Task\" was found. Looks like this entity is not registered in current \"default\" connection?"}
 {"level":"error","message":"   Unable to connect to db Error: getaddrinfo ENOTFOUND host.docker.internal","stack":"Error: Error: getaddrinfo ENOTFOUND host.docker.internal\n    at Object.connectToDb (/Users/gabriellji/Documents/study/nodejs-rsschool-2021/express-REST-service-2021/src/common/db.ts:10:11)\n    at processTicksAndRejections (node:internal/process/task_queues:93:5)"}
 {"level":"error","message":"   Unable to connect to db QueryFailedError: relation \"user\" already exists","stack":"Error: QueryFailedError: relation \"user\" already exists\n    at Object.connectToDb (/Users/gabriellji/Documents/study/nodejs-rsschool-2021/express-REST-service-2021/src/common/db.ts:11:11)\n    at processTicksAndRejections (node:internal/process/task_queues:93:5)"}
+{"level":"error","message":"   Unable to connect to db Error: getaddrinfo ENOTFOUND host.docker.internal","stack":"Error: Error: getaddrinfo ENOTFOUND host.docker.internal\n    at Object.connectToDb (/Users/gabriellji/Documents/study/nodejs-rsschool-2021/express-REST-service-2021/src/common/db.ts:12:11)\n    at processTicksAndRejections (internal/process/task_queues.js:94:5)"}
+{"level":"error","message":"   captured error: listen EADDRINUSE: address already in use :::4000"}
+{"level":"error","message":"   captured error: listen EADDRINUSE: address already in use :::4000"}
+{"level":"error","message":"   captured error: listen EADDRINUSE: address already in use :::4000"}
+{"level":"error","message":"   captured error: listen EADDRINUSE: address already in use :::4000"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: data and hash arguments required"}
+{"level":"error","message":"   Unhandled rejection detected: invalid input syntax for type uuid: \"12345\""}
+{"level":"error","message":"   Unhandled rejection detected: invalid input syntax for type uuid: \"12345\""}
+{"message":"   {\"status\":400,\"message\":\"Bad Request\"}","level":"error"}

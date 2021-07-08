@@ -5,8 +5,10 @@ import YAML from 'yamljs';
 import userRouter from './resources/users/user.router';
 import boardRouter from './resources/boards/board.router';
 import taskRouter from './resources/tasks/task.router';
+import loginRouter from './resources/login/login.router';
 import { logger } from './common/logger';
 import { logInfo, errorHandler } from './middlewares/error-handler';
+import { isAuthenticated } from './middlewares/auth';
 import 'reflect-metadata';
 
 const app = express();
@@ -47,6 +49,9 @@ process.on('unhandledRejection', (reason: Error) => {
 app.use(logInfo);
 app.use(errorHandler);
 
+app.use('/login', loginRouter);
+
+app.use(isAuthenticated);
 app.use('/users', userRouter);
 app.use('/boards', [boardRouter, taskRouter]);
 
