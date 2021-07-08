@@ -3,8 +3,8 @@ import { Request, Response } from 'express';
 import { HttpCodes, StatusMsg } from '../../enums/enums';
 import { getUserByEmail, userLogin } from '../users/user.service';
 
-const { SERVER_ERROR, OK } = HttpCodes;
-const { SERVER_ERROR_MSG } = StatusMsg;
+const { SERVER_ERROR, OK, BAD_REQUEST } = HttpCodes;
+const { SERVER_ERROR_MSG, INVALID_CREDENTIALS_MSG } = StatusMsg;
 
 const router = express.Router();
 
@@ -15,7 +15,7 @@ router.post('/', async (req: Request, res: Response) => {
     const user = await getUserByEmail(login);
 
     if (!user) {
-      return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
+      return res.status(BAD_REQUEST).json(INVALID_CREDENTIALS_MSG);
     }
 
     const token = await userLogin(user, password);

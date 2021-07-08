@@ -1,11 +1,13 @@
 import { Task } from '../../entities/task.entity';
 import { getRepository } from 'typeorm';
 import { User } from '../../entities/user.entity';
-// import { getJWToken } from '../../services/token.services';
 import * as bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import config from '../../common/config';
-const expirationPeriod = '30d';
+import { ExpirationPeriod, Admin } from '../../enums/enums';
+
+const { EXPIRATION_PERIOD } = ExpirationPeriod;
+const { ADMIN } = Admin;
 
 const getAllUsers = async (): Promise<User[]> =>
   await getRepository(User).find();
@@ -29,7 +31,7 @@ const userLogin = async (user: User, pass: string): Promise<string> => {
   };
 
   const token = jwt.sign(payload, config.JWT_SECRET_KEY, {
-    expiresIn: expirationPeriod,
+    expiresIn: EXPIRATION_PERIOD,
   });
 
   return token;
@@ -73,15 +75,12 @@ const deleteUser = async (id: string): Promise<void> => {
 };
 
 const createAdmin = async (): Promise<void> => {
-  const admin = await getUserByEmail('admin');
+  const admin = await getUserByEmail(ADMIN);
   if (!admin) {
-    const a = {
-      name: 'admin',
-      login: 'admin',
-      password: 'admin',
-    };
     await createUser({
-      ...a,
+      name: ADMIN,
+      login: ADMIN,
+      password: ADMIN,
     });
   }
 };
